@@ -12,6 +12,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 const useStyles = makeStyles((theme) => ({
   box: {
@@ -36,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.down('xs')]: {
-      display: 'none',
+      flexDirection: 'row',
     },
   },
   link: {
@@ -143,34 +145,33 @@ function Hero() {
         data-aos-once="true"
         className={classes.toolbar}
       >
-        <Button
-          data-aos="fade-left"
-          data-aos-once="true"
-          data-aos-delay="100"
-          className={classes.link}
-        >
-          Projects
-        </Button>
-        <Button
-          data-aos="fade-left"
-          data-aos-once="true"
-          data-aos-delay="200"
-          className={classes.link}
-        >
-          Contact Me
-        </Button>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
-          data-aos-delay="300"
           className={classes.link}
+        >
+          <WorkOutlineIcon className={classes.icon} />
+        </IconButton>
+        <IconButton
+          className={classes.link}
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-delay="100"
+        >
+          <MailOutlineIcon className={classes.icon} />
+        </IconButton>
+        <IconButton
+          className={classes.link}
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-delay="200"
         >
           <GitHubIcon className={classes.icon} />
         </IconButton>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
-          data-aos-delay="400"
+          data-aos-delay="300"
           className={classes.link}
         >
           <LinkedInIcon className={classes.icon} />
