@@ -31,14 +31,17 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
-    textAlign: 'right',
     alignItems: 'flex-end',
     top: 0,
     right: 0,
+    left: 0,
     marginTop: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.down('xs')]: {
+      width: '100%',
       flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
   link: {
@@ -66,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignSelf: 'center',
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center',
+    },
   },
   portrait: {
     width: '75%',
