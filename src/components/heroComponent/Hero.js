@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     fontFamily: 'Lato',
-    fontSize: '25px !important',
+    fontSize: '20px !important',
     color: '#0B325E',
     fontWeight: 300,
     [theme.breakpoints.down('sm')]: {
@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme) => ({
     alignSelf: 'center',
   },
   portrait: {
-    width: '100%',
-    maxWidth: '400px',
+    width: '75%',
+    maxWidth: '300px',
     boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
     borderRadius: '50%',
   },
@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     fontFamily: 'Cabin, sans-serif',
     fontWeight: 500,
-    fontSize: '80px',
+    fontSize: '60px',
     [theme.breakpoints.down('md')]: {
       fontSize: '50px',
       paddingBottom: '20px',
@@ -102,6 +102,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: 1,
   },
   knowMore: {
+    fontSize: '14px !important',
     [theme.breakpoints.down('xs')]: {
       display: 'none !important',
     },
