@@ -54,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
   container: {
     width: '90%',
     maxWidth: '2200px',
-    minWidth: '300px',
     padding: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
       maxWidth: '400px',
@@ -76,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
   },
   subheading: {
     color: '#f4f4f4',
