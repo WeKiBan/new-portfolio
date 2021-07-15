@@ -16,7 +16,7 @@ import 'aos/dist/aos.css';
 const useStyles = makeStyles((theme) => ({
   box: {
     position: 'relative',
-    height: '100vh',
+    height: window.innerHeight,
     background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
     display: 'flex',
     justifyContent: 'center',
