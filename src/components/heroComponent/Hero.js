@@ -103,9 +103,6 @@ const useStyles = makeStyles((theme) => ({
   },
   knowMore: {
     fontSize: '14px !important',
-    [theme.breakpoints.down('xs')]: {
-      display: 'none !important',
-    },
   },
   button: {
     position: 'absolute',
