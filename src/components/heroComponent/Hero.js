@@ -60,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '2200px',
     padding: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
+      width: '100%',
       maxWidth: '400px',
     },
   },
@@ -67,9 +68,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignSelf: 'center',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
+      width: '100%',
     },
   },
   portrait: {
