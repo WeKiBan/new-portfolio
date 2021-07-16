@@ -62,6 +62,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       maxWidth: '400px',
+      '@media (orientation: landscape)': {
+        display: 'flex !important',
+        flexDirection: 'row !important',
+        border: '5px solid yellow',
+        maxWidth: '100%',
+      },
     },
   },
   textContainer: {
@@ -78,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '300px',
     boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
     borderRadius: '50%',
+    '@media (orientation: landscape)': {
+      width: '20%',
+    },
   },
   imageContainer: {
     display: 'flex',
@@ -210,7 +219,11 @@ function Hero() {
           sm={12}
           md={6}
         >
-          <img className={classes.portrait} src={portrait} alt="" />
+          <img
+            className={classes.portrait}
+            src={portrait}
+            alt="portrait of Wes"
+          />
         </Grid>
       </Grid>
       <Box className={classes.button}>
