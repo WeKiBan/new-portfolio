@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
 import portrait from '../../images/portrait.jpg';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -15,9 +14,8 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 const useStyles = makeStyles((theme) => ({
-  box: {
+  wrapper: {
     position: 'relative',
-    height: window.innerHeight,
     background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
     display: 'flex',
     justifyContent: 'center',
@@ -26,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
       background: 'linear-gradient(to bottom, #4731d4 65%, #c9ee87 35%)',
     },
   },
-  toolbar: {
+  nav: {
+    boxSizing: 'border-box',
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
@@ -34,9 +33,8 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     right: 0,
     left: 0,
-    marginTop: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.down('xs')]: {
+    padding: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
       width: '100%',
       flexDirection: 'row',
       alignItems: 'center',
@@ -56,17 +54,21 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 40,
   },
   container: {
-    width: '90%',
+    position: 'absolute',
+    boxSizing: 'border-box',
+    left: 0,
+    display: 'flex',
+    width: '88%',
+    justifyContent: 'space-around',
     maxWidth: '2200px',
     padding: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
       width: '100%',
-      maxWidth: '400px',
+      justifyContent: 'center',
+      flexDirection: 'column',
       '@media (orientation: landscape)': {
-        display: 'flex !important',
-        flexDirection: 'row !important',
-        border: '5px solid yellow',
-        maxWidth: '100%',
+        flexDirection: 'row',
+        width: '100%',
       },
     },
   },
@@ -77,28 +79,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
       width: '100%',
+      '@media (orientation: landscape)': {
+        width: '50%',
+        alignItems: 'flex-start',
+        paddingLeft: theme.spacing(4),
+      },
     },
-  },
-  portrait: {
-    width: '75%',
-    maxWidth: '300px',
-    boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
-    borderRadius: '50%',
-    '@media (orientation: landscape)': {
-      width: '20%',
-    },
-  },
-  imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
   },
   subheading: {
     color: '#f4f4f4',
-    [theme.breakpoints.down('sm')]: {
-      paddingBottom: '20px',
-    },
   },
   heading: {
     fontFamily: 'Cabin, sans-serif',
@@ -106,7 +95,28 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '60px',
     [theme.breakpoints.down('md')]: {
       fontSize: '50px',
-      paddingBottom: '20px',
+    },
+  },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
+      '@media (orientation: landscape)': {
+        width: '50%',
+      },
+    },
+  },
+  portrait: {
+    width: '100%',
+    maxWidth: '300px',
+    boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
+    borderRadius: '50%',
+    [theme.breakpoints.down('sm')]: {
+      '@media (orientation: landscape)': {
+        width: '70%',
+      },
     },
   },
 
@@ -147,19 +157,25 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Hero() {
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   useEffect(() => {
     Aos.init();
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowHeight(window.innerHeight);
+    }
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const classes = useStyles();
 
   return (
-    <Box className={classes.box}>
-      <Box
-        data-aos="fade-left"
-        data-aos-once="true"
-        className={classes.toolbar}
-      >
+    <Box style={{ height: windowHeight }} className={classes.wrapper}>
+      <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
@@ -193,15 +209,12 @@ function Hero() {
         </IconButton>
       </Box>
 
-      <Grid className={classes.container} container>
-        <Grid
+      <Box className={classes.container}>
+        <Box
           data-aos="fade-down"
           data-aos-once="true"
           data-aos-delay="300"
           className={classes.textContainer}
-          item
-          sm={12}
-          md={5}
         >
           <Typography className={classes.heading} color="primary" variant="h1">
             Wes Banyard.
@@ -209,23 +222,20 @@ function Hero() {
           <Typography className={classes.subheading} variant="h5">
             Front End Developer
           </Typography>
-        </Grid>
-        <Grid
+        </Box>
+        <Box
           data-aos="fade-up"
           data-aos-once="true"
           data-aos-duration="1000"
           className={classes.imageContainer}
-          item
-          sm={12}
-          md={6}
         >
           <img
             className={classes.portrait}
             src={portrait}
             alt="portrait of Wes"
           />
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
       <Box className={classes.button}>
         <Typography className={classes.knowMore}>Know More</Typography>
         <ExpandMoreIcon className={classes.arrow} />
