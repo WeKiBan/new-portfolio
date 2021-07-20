@@ -103,6 +103,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     padding: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
+      '@media (orientation: landscape)': {
+        width: '35%',
+      },
+    },
     [theme.breakpoints.down('sm')]: {
       '@media (orientation: landscape)': {
         width: '25%',
