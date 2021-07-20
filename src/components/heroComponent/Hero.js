@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
+    padding: 0,
+    margin: 0,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -56,10 +58,9 @@ const useStyles = makeStyles((theme) => ({
   container: {
     position: 'absolute',
     boxSizing: 'border-box',
-    left: 0,
     display: 'flex',
-    width: '88%',
-    justifyContent: 'space-around',
+    width: '80%',
+    justifyContent: 'space-evenly',
     maxWidth: '2200px',
     padding: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
@@ -94,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: '60px',
     [theme.breakpoints.down('md')]: {
-      fontSize: '50px',
+      fontSize: '40px',
     },
   },
   imageContainer: {
@@ -104,20 +105,15 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
       '@media (orientation: landscape)': {
-        width: '50%',
+        width: '25%',
       },
     },
   },
   portrait: {
     width: '100%',
-    maxWidth: '300px',
+    maxWidth: '400px',
     boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
     borderRadius: '50%',
-    [theme.breakpoints.down('sm')]: {
-      '@media (orientation: landscape)': {
-        width: '70%',
-      },
-    },
   },
 
   arrow: {
@@ -158,6 +154,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     Aos.init();
   }, []);
@@ -169,6 +166,17 @@ function Hero() {
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const mediaQueryList = window.matchMedia('(orientation: portrait)');
+    function handleOrientationChange() {
+      setWindowHeight(window.innerHeight);
+    }
+    mediaQueryList.addEventListener('resize', handleOrientationChange);
+
+    return () =>
+      mediaQueryList.removeEventListener('resize', handleOrientationChange);
   }, []);
 
   const classes = useStyles();
