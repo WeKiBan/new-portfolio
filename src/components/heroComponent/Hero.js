@@ -178,10 +178,10 @@ function Hero() {
     function handleOrientationChange() {
       setWindowHeight(window.innerHeight);
     }
-    mediaQueryList.addEventListener('resize', handleOrientationChange);
+    mediaQueryList.addEventListener('change', handleOrientationChange);
 
     return () =>
-      mediaQueryList.removeEventListener('resize', handleOrientationChange);
+      mediaQueryList.removeEventListener('change', handleOrientationChange);
   }, []);
 
   const classes = useStyles();
