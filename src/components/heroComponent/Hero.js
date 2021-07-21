@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     background: 'linear-gradient(to bottom, #4731d4 65%, #c9ee87 35%)',
     '@media (orientation: landscape)': {
-      background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
+      background: 'linear-gradient(to right, #4731d4 70%, #c9ee87 30%)',
     },
   },
   nav: {
@@ -56,15 +56,19 @@ const useStyles = makeStyles((theme) => ({
     '@media (orientation: landscape)': {
       justifyContent: 'space-evenly',
       flexDirection: 'row',
-      width: '60%',
       [theme.breakpoints.down('sm')]: {
-        width: '60%',
+        width: '95%',
+        position: 'absolute',
+        left: 0,
       },
     },
   },
   portraitContainer: {
-    width: '50%',
+    width: '70%',
     maxWidth: 400,
+    '@media (orientation: landscape)': {
+      width: '30%',
+    },
   },
   portrait: {
     width: '100%',
@@ -79,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   heading: {
+    fontSize: 40,
     [theme.breakpoints.up('md')]: {
       fontSize: 70,
     },
