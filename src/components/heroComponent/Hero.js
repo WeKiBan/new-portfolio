@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import portrait from '../../images/portrait.jpg';
@@ -11,13 +11,12 @@ import 'aos/dist/aos.css';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     width: '100vw',
-    height: '100vh',
+    height: '-webkit-fill-available',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -117,9 +116,17 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero() {
   const classes = useStyles();
+  const [height, setHeight] = useState(window.innerHeight);
+
+  useLayoutEffect(() => {
+    function updateHeight() {
+      setHeight(window.innerHeight);
+    }
+    window.addEventListener('resize', updateHeight);
+  }, []);
 
   return (
-    <Box className={classes.wrapper}>
+    <Box style={{ height: height }} className={classes.wrapper}>
       {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
