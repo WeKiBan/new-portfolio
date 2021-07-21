@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import portrait from '../../images/portrait.jpg';
@@ -8,133 +7,85 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import IconButton from '@material-ui/core/IconButton';
-import Aos from 'aos';
 import 'aos/dist/aos.css';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
+
 const useStyles = makeStyles((theme) => ({
   wrapper: {
-    maxWidth: '100vw',
     position: 'relative',
-    background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
-    padding: 0,
-    margin: 0,
+    overflow: 'hidden',
+    width: '100vw',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    [theme.breakpoints.down('sm')]: {
-      background: 'linear-gradient(to bottom, #4731d4 65%, #c9ee87 35%)',
+    background: 'linear-gradient(to bottom, #4731d4 65%, #c9ee87 35%)',
+    '@media (orientation: landscape)': {
+      background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
     },
   },
   nav: {
-    boxSizing: 'border-box',
     position: 'absolute',
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-end',
+    justifyContent: 'center',
     top: 0,
-    right: 0,
-    left: 0,
+    width: '100%',
     padding: theme.spacing(1),
-    [theme.breakpoints.down('sm')]: {
-      width: '100%',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
+    '@media (orientation: landscape)': {
+      flexDirection: 'column',
+      justifyContent: 'flex-end',
+      alignItems: 'flex-end',
     },
   },
-  link: {
-    fontFamily: 'Lato',
-    fontSize: '20px !important',
-    color: '#0B325E',
-    fontWeight: 300,
-    [theme.breakpoints.down('sm')]: {
-      color: '#c9ee87',
+  navLink: {
+    color: '#c9ee87',
+    '@media (orientation: landscape)': {
+      color: '#4731d4 ',
     },
   },
-  icon: {
-    fontSize: 40,
+  navIcon: {
+    fontSize: '45px',
   },
   container: {
-    position: 'absolute',
-    boxSizing: 'border-box',
     display: 'flex',
+    flexDirection: 'column',
     width: '100%',
     justifyContent: 'space-evenly',
-    maxWidth: '2200px',
-    padding: theme.spacing(3),
-    [theme.breakpoints.down('sm')]: {
-      flexDirection: 'column',
-      '@media (orientation: landscape)': {
-        flexDirection: 'row',
-        width: '100%',
+    alignItems: 'center',
+    '@media (orientation: landscape)': {
+      justifyContent: 'space-evenly',
+      flexDirection: 'row',
+      width: '60%',
+      [theme.breakpoints.down('sm')]: {
+        width: '60%',
       },
     },
   },
+  portraitContainer: {
+    width: '50%',
+    maxWidth: 400,
+  },
+  portrait: {
+    width: '100%',
+    borderRadius: '100%',
+  },
   textContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-      textAlign: 'center',
-      width: '100%',
-      '@media (orientation: landscape)': {
-        width: '50%',
-        alignItems: 'flex-start',
-        paddingLeft: theme.spacing(4),
-      },
+    textAlign: 'center',
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    '@media (orientation: landscape)': {
+      textAlign: 'left',
+    },
+  },
+  heading: {
+    [theme.breakpoints.up('md')]: {
+      fontSize: 70,
     },
   },
   subheading: {
     color: '#f4f4f4',
-  },
-  heading: {
-    fontFamily: 'Cabin, sans-serif',
-    fontWeight: 500,
-    fontSize: '60px',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: '40px',
-    },
-  },
-  imageContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-      '@media (orientation: landscape)': {
-        width: '35%',
-      },
-    },
-    [theme.breakpoints.down('sm')]: {
-      '@media (orientation: landscape)': {
-        width: '25%',
-      },
-    },
-  },
-  portrait: {
-    width: '100%',
-    maxWidth: '400px',
-    boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
-    borderRadius: '50%',
-    [theme.breakpoints.down('sm')]: {
-      '@media (orientation: portrait)': {
-        width: '80%',
-      },
-    },
-  },
-
-  arrow: {
-    fontSize: 40,
-    width: 100,
-    marginTop: '-10px',
-    padding: 0,
-    textAlign: 'center',
-    opacity: 1,
-  },
-  knowMore: {
-    fontSize: '14px !important',
   },
   button: {
     position: 'absolute',
@@ -145,92 +96,66 @@ const useStyles = makeStyles((theme) => ({
     bottom: '20px',
     animation: 'bounce 0.6s infinite alternate',
     cursor: 'pointer',
-    color: '#f4f4f4',
+    color: '#4731d4',
+    transition: '0.3s',
     '&:hover': {
       transform: 'scale(1.2)',
-      color: '#c9ee87 !important',
-    },
-    [theme.breakpoints.down('sm')]: {
       color: '#4731d4',
-      bottom: '10px',
+    },
+    '@media (orientation: landscape)': {
+      color: '#c9ee87',
       '&:hover': {
         transform: 'scale(1.2)',
-        color: '#4731d4 !important',
+        color: '#f4f4f4',
       },
     },
+  },
+  knowMore: {
+    fontSize: 20,
   },
 }));
 
 function Hero() {
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    Aos.init();
-  }, []);
-
-  useEffect(() => {
-    function handleResize() {
-      setWindowHeight(window.innerHeight);
-    }
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    const mediaQueryList = window.matchMedia('(orientation: portrait)');
-    function handleOrientationChange() {
-      setWindowHeight(window.innerHeight);
-      setWindowWidth(window.innerWidth);
-    }
-    mediaQueryList.addEventListener('change', handleOrientationChange);
-
-    return () =>
-      mediaQueryList.removeEventListener('change', handleOrientationChange);
-  }, []);
-
   const classes = useStyles();
 
   return (
-    <Box
-      style={{ height: windowHeight, maxWidth: windowWidth }}
-      className={classes.wrapper}
-    >
+    <Box className={classes.wrapper}>
+      {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
-          className={classes.link}
+          className={classes.navLink}
         >
-          <WorkOutlineIcon className={classes.icon} />
+          <WorkOutlineIcon className={classes.navIcon} />
         </IconButton>
         <IconButton
-          className={classes.link}
+          className={classes.navLink}
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="100"
         >
-          <MailOutlineIcon className={classes.icon} />
+          <MailOutlineIcon className={classes.navIcon} />
         </IconButton>
         <IconButton
-          className={classes.link}
+          className={classes.navLink}
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="200"
         >
-          <GitHubIcon className={classes.icon} />
+          <GitHubIcon className={classes.navIcon} />
         </IconButton>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="300"
-          className={classes.link}
+          className={classes.navLink}
         >
-          <LinkedInIcon className={classes.icon} />
+          <LinkedInIcon className={classes.navIcon} />
         </IconButton>
       </Box>
-
+      {/* End of Nav */}
+      {/* Start Of Main Container */}
       <Box className={classes.container}>
         <Box
           data-aos="fade-down"
@@ -238,7 +163,7 @@ function Hero() {
           data-aos-delay="300"
           className={classes.textContainer}
         >
-          <Typography className={classes.heading} color="primary" variant="h1">
+          <Typography className={classes.heading} color="primary" variant="h3">
             Wes Banyard.
           </Typography>
           <Typography className={classes.subheading} variant="h5">
@@ -249,7 +174,7 @@ function Hero() {
           data-aos="fade-up"
           data-aos-once="true"
           data-aos-duration="1000"
-          className={classes.imageContainer}
+          className={classes.portraitContainer}
         >
           <img
             className={classes.portrait}
@@ -258,11 +183,12 @@ function Hero() {
           />
         </Box>
       </Box>
-      <Box className={classes.button}>
+      <Box className={`${classes.button} animate__animated animate__bounces`}>
         <Typography className={classes.knowMore}>Know More</Typography>
         <ExpandMoreIcon className={classes.arrow} />
       </Box>
     </Box>
+    /*  End Of Main Container */
   );
 }
 
