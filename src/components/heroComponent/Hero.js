@@ -60,13 +60,11 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     boxSizing: 'border-box',
     display: 'flex',
-    width: '80%',
+    width: '100%',
     justifyContent: 'space-evenly',
     maxWidth: '2200px',
     padding: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
-      width: '100%',
-      justifyContent: 'center',
       flexDirection: 'column',
       '@media (orientation: landscape)': {
         flexDirection: 'row',
@@ -95,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Cabin, sans-serif',
     fontWeight: 500,
     fontSize: '60px',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '40px',
     },
   },
