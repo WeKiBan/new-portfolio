@@ -163,6 +163,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero() {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     Aos.init();
@@ -181,6 +182,7 @@ function Hero() {
     const mediaQueryList = window.matchMedia('(orientation: portrait)');
     function handleOrientationChange() {
       setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
     }
     mediaQueryList.addEventListener('change', handleOrientationChange);
 
@@ -191,7 +193,10 @@ function Hero() {
   const classes = useStyles();
 
   return (
-    <Box style={{ height: windowHeight }} className={classes.wrapper}>
+    <Box
+      style={{ height: windowHeight, maxWidth: windowWidth }}
+      className={classes.wrapper}
+    >
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
           data-aos="fade-left"
