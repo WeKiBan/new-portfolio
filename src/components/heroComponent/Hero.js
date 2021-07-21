@@ -119,6 +119,11 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '400px',
     boxShadow: '2px 5px 16px 0px #0B325E, 5px 5px 15px 5px rgba(0,0,0,0)',
     borderRadius: '50%',
+    [theme.breakpoints.down('sm')]: {
+      '@media (orientation: portrait)': {
+        width: '80%',
+      },
+    },
   },
 
   arrow: {
@@ -177,6 +182,7 @@ function Hero() {
     const mediaQueryList = window.matchMedia('(orientation: portrait)');
     function handleOrientationChange() {
       setWindowHeight(window.innerHeight);
+      console.log('orientation');
     }
     mediaQueryList.addEventListener('change', handleOrientationChange);
 
