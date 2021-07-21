@@ -78,6 +78,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
+    cursor: 'default',
     '@media (orientation: landscape)': {
       textAlign: 'left',
     },
