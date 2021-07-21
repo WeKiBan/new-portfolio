@@ -182,7 +182,6 @@ function Hero() {
     const mediaQueryList = window.matchMedia('(orientation: portrait)');
     function handleOrientationChange() {
       setWindowHeight(window.innerHeight);
-      console.log('orientation');
     }
     mediaQueryList.addEventListener('change', handleOrientationChange);
 
