@@ -15,6 +15,7 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
+    maxWidth: '100vw',
     position: 'relative',
     background: 'linear-gradient(to right, #4731d4 65%, #c9ee87 35%)',
     padding: 0,
