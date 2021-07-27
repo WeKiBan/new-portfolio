@@ -1,7 +1,8 @@
 import React, { useState, useLayoutEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import portrait from '../../images/portrait.jpg';
+import portrait from '../images/portrait.jpg';
+import overlay from '../images/overlay.jpg';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -25,8 +26,24 @@ const useStyles = makeStyles((theme) => ({
       background: 'linear-gradient(to right, #4731d4 70%, #c9ee87 30%)',
     },
   },
+  overlay: {
+    display: 'none',
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    bottom: 0,
+    left: 0,
+    height: '100%',
+    width: '100%',
+    background: `url(${overlay}) no-repeat center center fixed`,
+    backgroundSize: 'cover',
+    opacity: 0.5,
+    filter: 'saturate(0)',
+    mixBlendMode: 'multiply',
+  },
   nav: {
     position: 'absolute',
+    zIndex: 1000,
     display: 'flex',
     justifyContent: 'center',
     top: 0,
@@ -34,25 +51,29 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     '@media (orientation: landscape)': {
       flexDirection: 'column',
-      justifyContent: 'flex-end',
+      justifyContent: 'center',
       alignItems: 'flex-end',
+      height: '100%',
     },
   },
   navLink: {
     color: '#c9ee87',
     '@media (orientation: landscape)': {
-      color: '#4731d4 ',
+      color: '#4731d4',
     },
   },
   navIcon: {
     fontSize: '45px',
   },
   container: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
     justifyContent: 'space-evenly',
     alignItems: 'center',
+    borderBottomLeftRadius: '50%',
+    borderBottomRightRadius: '50%',
     '@media (orientation: landscape)': {
       justifyContent: 'space-evenly',
       flexDirection: 'row',
@@ -64,8 +85,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   portraitContainer: {
+    padding: theme.spacing(2),
     width: '70%',
-    maxWidth: 400,
+    maxWidth: 350,
     '@media (orientation: landscape)': {
       width: '30%',
     },
@@ -85,6 +107,8 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     fontSize: 40,
+    fontFamily: 'Raleway',
+    fontWeight: 500,
     [theme.breakpoints.up('md')]: {
       fontSize: 70,
     },
@@ -93,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#f4f4f4',
   },
   button: {
+    zIndex: 1000,
     position: 'absolute',
     display: 'flex',
     flexDirection: 'column',
@@ -118,6 +143,11 @@ const useStyles = makeStyles((theme) => ({
   knowMore: {
     fontSize: 20,
   },
+  svg: {
+    position: 'absolute',
+    width: '100%',
+    bottom: 0,
+  },
 }));
 
 function Hero() {
@@ -133,11 +163,13 @@ function Hero() {
 
   return (
     <Box style={{ height: height }} className={classes.wrapper}>
+      <Box className={classes.overlay}></Box>
       {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
+          ease-in
           className={classes.navLink}
         >
           <WorkOutlineIcon className={classes.navIcon} />
@@ -147,6 +179,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="100"
+          ease-in
         >
           <MailOutlineIcon className={classes.navIcon} />
         </IconButton>
@@ -155,6 +188,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="200"
+          ease-in
         >
           <GitHubIcon className={classes.navIcon} />
         </IconButton>
@@ -162,6 +196,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="300"
+          ease-in
           className={classes.navLink}
         >
           <LinkedInIcon className={classes.navIcon} />
@@ -174,6 +209,7 @@ function Hero() {
           data-aos="fade-down"
           data-aos-once="true"
           data-aos-delay="300"
+          ease-in
           className={classes.textContainer}
         >
           <Typography className={classes.heading} color="primary" variant="h3">
@@ -186,7 +222,8 @@ function Hero() {
         <Box
           data-aos="fade-up"
           data-aos-once="true"
-          data-aos-duration="1000"
+          data-aos-duration="500"
+          ease-in
           className={classes.portraitContainer}
         >
           <img

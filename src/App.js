@@ -1,4 +1,6 @@
-import Hero from './components/heroComponent/Hero';
+import Hero from './components/Hero';
+import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
 import './App.scss';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -11,6 +13,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Hero />
+        <AboutMe />
+        <Skills />
       </div>
     </ThemeProvider>
   );
