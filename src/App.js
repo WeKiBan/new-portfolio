@@ -1,7 +1,8 @@
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
-import './App.scss';
+import Projects from './components/Projects';
+import './App.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import theme from './theme';
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <AboutMe />
         <Skills />
+        <Projects />
       </div>
     </ThemeProvider>
   );

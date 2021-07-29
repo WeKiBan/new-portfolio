@@ -169,7 +169,7 @@ function Hero() {
         <IconButton
           data-aos="fade-left"
           data-aos-once="true"
-          ease-in
+          ease-in="true"
           className={classes.navLink}
         >
           <WorkOutlineIcon className={classes.navIcon} />
@@ -179,7 +179,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="100"
-          ease-in
+          ease-in="true"
         >
           <MailOutlineIcon className={classes.navIcon} />
         </IconButton>
@@ -188,7 +188,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="200"
-          ease-in
+          ease-in="true"
         >
           <GitHubIcon className={classes.navIcon} />
         </IconButton>
@@ -196,7 +196,7 @@ function Hero() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="300"
-          ease-in
+          ease-in="true"
           className={classes.navLink}
         >
           <LinkedInIcon className={classes.navIcon} />
@@ -209,7 +209,7 @@ function Hero() {
           data-aos="fade-down"
           data-aos-once="true"
           data-aos-delay="300"
-          ease-in
+          ease-in="true"
           className={classes.textContainer}
         >
           <Typography className={classes.heading} color="primary" variant="h3">
@@ -223,7 +223,7 @@ function Hero() {
           data-aos="fade-up"
           data-aos-once="true"
           data-aos-duration="500"
-          ease-in
+          ease-in="true"
           className={classes.portraitContainer}
         >
           <img

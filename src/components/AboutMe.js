@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: theme.spacing(5, 1),
+    padding: theme.spacing(5, 0),
   },
   container: {
     width: '80%',
@@ -42,6 +42,11 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center',
     },
   },
+  waveBottom: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+  },
 }));
 
 function AboutMe() {
@@ -52,10 +57,10 @@ function AboutMe() {
       data-aos="fade-up"
       data-aos-once="true"
       data-aos-duration="500"
-      ease-in
+      ease-in="true"
       className={classes.wrapper}
     >
-      <Typography className={classes.heading} variant="h3">
+      <Typography className={classes.heading} variant="h4">
         About Me
       </Typography>
       <Grid container className={classes.container}>
