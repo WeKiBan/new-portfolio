@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 function Projects() {
   const classes = useStyles();
   return (
-    <Box className={classes.wrapper}>
+    <Box className={classes.wrapper} id="projects">
       <svg
         className={classes.waveTop}
         viewBox="0 0 500 150"

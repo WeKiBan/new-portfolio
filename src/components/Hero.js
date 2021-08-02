@@ -11,6 +11,7 @@ import IconButton from '@material-ui/core/IconButton';
 import 'aos/dist/aos.css';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import { Link } from 'react-scroll';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -118,8 +119,9 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     zIndex: 1000,
+    textDecoration: 'none',
     position: 'absolute',
-    display: 'flex',
+    display: 'flex !important',
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -167,6 +169,7 @@ function Hero() {
       {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
+          href="#projects"
           data-aos="fade-left"
           data-aos-once="true"
           ease-in="true"
@@ -176,6 +179,7 @@ function Hero() {
         </IconButton>
         <IconButton
           className={classes.navLink}
+          href="#"
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="100"
@@ -185,6 +189,8 @@ function Hero() {
         </IconButton>
         <IconButton
           className={classes.navLink}
+          target="_blank"
+          href="https://github.com/Wekiban"
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="200"
@@ -193,6 +199,8 @@ function Hero() {
           <GitHubIcon className={classes.navIcon} />
         </IconButton>
         <IconButton
+          target="_blank"
+          href="https://www.linkedin.com/in/wes-banyard/"
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-delay="300"
@@ -233,10 +241,14 @@ function Hero() {
           />
         </Box>
       </Box>
-      <Box className={`${classes.button} animate__animated animate__bounces`}>
+
+      <Link
+        to="about-section"
+        className={`${classes.button} animate__animated animate__bounces`}
+      >
         <Typography className={classes.knowMore}>Know More</Typography>
         <ExpandMoreIcon className={classes.arrow} />
-      </Box>
+      </Link>
     </Box>
     /*  End Of Main Container */
   );

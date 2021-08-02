@@ -8,12 +8,11 @@ import weather from './images/weather.png';
 // ABOUT DATA
 export const aboutData = {
   img: '.profile.jpg',
-  paragraphOne:
+  info: [
     "I'm Wes, a web developer from the West Midlands. I'm passionate about tech and I love creating innovative applications that make people's lives easier. I find learning new technologies and creating solutions to difficult problems massively rewarding.",
-  paragraphTwo:
     'At the moment my evenings are spent improving my depth of knowledge with React and Material UI. My long term goal is to become an effective full stack developer, able to efficiently turn great ideas into working products',
-  paragraphThree:
     'In my spare time I love to travel and take photographs and I am also passionate about learning Italian',
+  ],
 };
 
 // PROJECTS DATA

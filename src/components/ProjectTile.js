@@ -5,6 +5,7 @@ import { Box } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import Tilt from 'react-tilt';
 
+
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     fontFamily: 'Raleway',
@@ -20,11 +21,16 @@ const useStyles = makeStyles((theme) => ({
   infoContainer: {
     padding: theme.spacing(1),
   },
+  technologies: {
+    fontStyle: 'italic',
+    color: 'grey',
+  },
 }));
 
 function ProjectTile({ data }) {
   const classes = useStyles();
   const { img, title, info, info2, url, repo } = data;
+
   return (
     <Grid className={classes.wrapper} container>
       <Grid className={classes.infoContainer} item xs={12} sm={4}>
@@ -34,7 +40,11 @@ function ProjectTile({ data }) {
         <Typography gutterBottom color="initial">
           {info}
         </Typography>
-        <Typography gutterBottom color="initial">
+        <Typography
+          className={classes.technologies}
+          gutterBottom
+          color="initial"
+        >
           {info2}
         </Typography>
       </Grid>
@@ -55,10 +65,25 @@ function ProjectTile({ data }) {
           <img src={img} alt="website screenshot" />
         </Tilt>
         <Box>
-          <Button color="secondary" variant="contained">
+          <Button
+            target="_blank"
+            color="secondary"
+            variant="contained"
+            href={url}
+          >
             See Live
           </Button>
-          <Button>Source Code</Button>
+
+        
+            <Button
+              target="_blank"
+              color="primary"
+              variant="contained"
+              href={repo}
+            >
+              Source Code
+            </Button>
+
         </Box>
       </Grid>
     </Grid>

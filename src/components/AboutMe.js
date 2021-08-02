@@ -3,6 +3,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import computer from '../images/computer.jpg';
 import Grid from '@material-ui/core/Grid';
+import { aboutData } from '../data'
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -54,10 +55,11 @@ function AboutMe() {
 
   return (
     <Box
-      data-aos="fade-up"
+      id="about-section"
+      data-aos="fade"
       data-aos-once="true"
-      data-aos-duration="500"
       ease-in="true"
+      animation-duration="500"
       className={classes.wrapper}
     >
       <Typography className={classes.heading} variant="h4">
@@ -73,24 +75,9 @@ function AboutMe() {
         </Grid>
 
         <Grid md={6} sm={12} item className={classes.gridItem}>
-          <Typography className={classes.info}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            blanditiis debitis suscipit itaque repellendus voluptas sapiente,
-            excepturi cupiditate! Maxime suscipit ipsam veritatis incidunt
-            tenetur facere facilis, perferendis eius ullam impedit reiciendis
-            ratione.
-          </Typography>
-          <Typography className={classes.info}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            blanditiis debitis suscipit itaque repellendus voluptas sapiente,
-            excepturi cupiditate! Maxime suscipit ipsam veritatis incidunt
-            tenetur facere facilis, perferendis eius ullam impedit reiciendis
-            ratione.
-          </Typography>
-          <Typography className={classes.info}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-            blanditiis debitis suscipit itaque repellendus voluptas sapiente.
-          </Typography>
+          {aboutData.info.map((paragraph) => (
+            <Typography className={classes.info}>{paragraph}</Typography>
+          ))}
         </Grid>
       </Grid>
     </Box>
