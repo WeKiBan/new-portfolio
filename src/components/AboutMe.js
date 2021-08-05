@@ -3,7 +3,8 @@ import { makeStyles, Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
 import computer from '../images/computer.jpg';
 import Grid from '@material-ui/core/Grid';
-import { aboutData } from '../data'
+import { aboutData } from '../data';
+
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -31,11 +32,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
   },
   computerImage: {
-    maxWidth: '350px',
-    borderRadius: '50%',
-    [theme.breakpoints.down('sm')]: {
-      maxWidth: '70%',
-    },
+    maxWidth: 280,
   },
   info: {
     padding: theme.spacing(2, 0),

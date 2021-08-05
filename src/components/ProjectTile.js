@@ -5,7 +5,6 @@ import { Box } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import Tilt from 'react-tilt';
 
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     fontFamily: 'Raleway',
@@ -24,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   technologies: {
     fontStyle: 'italic',
     color: 'grey',
+  },
+  button: {
+    marginRight: theme.spacing(1),
   },
 }));
 
@@ -48,7 +50,16 @@ function ProjectTile({ data }) {
           {info2}
         </Typography>
       </Grid>
-      <Grid className={classes.imgContainer} item xs={12} sm={8}>
+      <Grid
+        onClick={(e) => {
+          e.preventDefault();
+          window.open(url, '_blank');
+        }}
+        className={classes.imgContainer}
+        item
+        xs={12}
+        sm={8}
+      >
         <Tilt
           options={{
             reverse: false,
@@ -66,6 +77,7 @@ function ProjectTile({ data }) {
         </Tilt>
         <Box>
           <Button
+            className={classes.button}
             target="_blank"
             color="secondary"
             variant="contained"
@@ -74,16 +86,15 @@ function ProjectTile({ data }) {
             See Live
           </Button>
 
-        
-            <Button
-              target="_blank"
-              color="primary"
-              variant="contained"
-              href={repo}
-            >
-              Source Code
-            </Button>
-
+          <Button
+            className={classes.button}
+            target="_blank"
+            color="primary"
+            variant="contained"
+            href={repo}
+          >
+            Source Code
+          </Button>
         </Box>
       </Grid>
     </Grid>

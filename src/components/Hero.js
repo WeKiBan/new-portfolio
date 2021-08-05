@@ -95,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
   },
   portrait: {
     width: '100%',
-    borderRadius: '100%',
+    borderRadius: '50%',
   },
   textContainer: {
     textAlign: 'center',
