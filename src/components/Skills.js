@@ -71,6 +71,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faHtml5} />
+          <Typography>HTML5</Typography>
         </Grid>
         <Grid
           data-aos="fade-left"
@@ -85,6 +86,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faCss3} />
+          <Typography>CSS</Typography>
         </Grid>
         <Grid
           data-aos="fade-left"
@@ -99,6 +101,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faJsSquare} />
+          <Typography>JavaScript</Typography>
         </Grid>
         <Grid
           data-aos="fade-left"
@@ -113,6 +116,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faBootstrap} />
+          <Typography>Bootstrap</Typography>
         </Grid>
         <Grid
           data-aos="fade-left"
@@ -127,6 +131,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faSass} />
+          <Typography>SASS</Typography>
         </Grid>
         <Grid
           data-aos="fade-left"
@@ -141,6 +146,7 @@ function Skills() {
           md={2}
         >
           <FontAwesomeIcon icon={faReact} />
+          <Typography>React</Typography>
         </Grid>
       </Grid>
     </Box>
