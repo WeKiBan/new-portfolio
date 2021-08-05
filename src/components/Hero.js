@@ -164,7 +164,7 @@ function Hero() {
   }, []);
 
   return (
-    <Box style={{ height: height }} className={classes.wrapper}>
+    <Box id="hero" style={{ height: height }} className={classes.wrapper}>
       <Box className={classes.overlay}></Box>
       {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>

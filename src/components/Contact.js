@@ -36,6 +36,7 @@ function Contact() {
   return (
     <Box className={classes.container}>
       <IconButton
+        href="#hero"
         className={`${classes.button} animate__animated animate__bounces`}
       >
         <ArrowBackIosIcon className={classes.arrow} />
