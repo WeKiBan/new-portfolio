@@ -6,7 +6,7 @@ import { projectData } from '../data';
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    background: '#f4f4f4',
+    background: '#EEEEEE',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -42,7 +42,7 @@ function Projects() {
         preserveAspectRatio="none"
       >
         <path
-          fill="#4731d4"
+          fill="#333333"
           fillOpacity="1"
           d="M-59.81,-46.88 C130.92,142.59 171.56,-112.98 568.85,74.50 L500.00,0.00 L0.00,0.00 Z"
         ></path>

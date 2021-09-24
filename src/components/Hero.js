@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { Link } from 'react-scroll';
+import background from '../images/bg-computer.jpg';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -22,25 +23,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'linear-gradient(to bottom, #4731d4 65%, #c9ee87 35%)',
-    '@media (orientation: landscape)': {
-      background: 'linear-gradient(to right, #4731d4 70%, #c9ee87 30%)',
-    },
-  },
-  overlay: {
-    display: 'none',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    bottom: 0,
-    left: 0,
-    height: '100%',
-    width: '100%',
-    background: `url(${overlay}) no-repeat center center fixed`,
+    background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${background})`,
     backgroundSize: 'cover',
-    opacity: 0.5,
-    filter: 'saturate(0)',
-    mixBlendMode: 'multiply',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
   },
   nav: {
     position: 'absolute',
@@ -50,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: '100%',
     padding: theme.spacing(1),
-    '@media (orientation: landscape)': {
+    [theme.breakpoints.up('md')]: {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-end',
@@ -58,9 +44,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   navLink: {
-    color: '#c9ee87',
-    '@media (orientation: landscape)': {
-      color: '#4731d4',
+    color: 'orange',
+    '&:hover': {
+      color: '#f4f4f4',
     },
   },
   navIcon: {
@@ -71,43 +57,27 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
     alignItems: 'center',
-    borderBottomLeftRadius: '50%',
-    borderBottomRightRadius: '50%',
-    '@media (orientation: landscape)': {
-      justifyContent: 'space-evenly',
-      flexDirection: 'row',
-      [theme.breakpoints.down('sm')]: {
-        width: '95%',
-        position: 'absolute',
-        left: 0,
-      },
+    [theme.breakpoints.up('md')]: {
+      width: '70%',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
     },
   },
-  portraitContainer: {
-    padding: theme.spacing(2),
-    width: '70%',
-    maxWidth: 350,
-    '@media (orientation: landscape)': {
-      width: '30%',
-    },
-  },
-  portrait: {
-    width: '100%',
-    borderRadius: '50%',
-  },
+
   textContainer: {
-    textAlign: 'center',
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    cursor: 'default',
-    '@media (orientation: landscape)': {
+    textAlign: 'center',
+    [theme.breakpoints.up('md')]: {
       textAlign: 'left',
     },
   },
+  hello: {
+    color: 'white',
+  },
   heading: {
-    fontSize: 40,
     fontFamily: 'Raleway',
     fontWeight: 500,
     [theme.breakpoints.up('md')]: {
@@ -128,27 +98,15 @@ const useStyles = makeStyles((theme) => ({
     bottom: '20px',
     animation: 'bounce 0.6s infinite alternate',
     cursor: 'pointer',
-    color: '#4731d4',
+    color: 'orange',
     transition: '0.3s',
     '&:hover': {
       transform: 'scale(1.2)',
-      color: '#4731d4',
-    },
-    '@media (orientation: landscape)': {
-      color: '#c9ee87',
-      '&:hover': {
-        transform: 'scale(1.2)',
-        color: '#f4f4f4',
-      },
+      color: '#f4f4f4',
     },
   },
   knowMore: {
     fontSize: 20,
-  },
-  svg: {
-    position: 'absolute',
-    width: '100%',
-    bottom: 0,
   },
 }));
 
@@ -165,7 +123,6 @@ function Hero() {
 
   return (
     <Box id="hero" style={{ height: height }} className={classes.wrapper}>
-      <Box className={classes.overlay}></Box>
       {/* Start of Nav */}
       <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
         <IconButton
@@ -220,28 +177,22 @@ function Hero() {
           ease-in="true"
           className={classes.textContainer}
         >
-          <Typography className={classes.heading} color="primary" variant="h3">
-            Wes Banyard.
+          <Typography color="primary" variant="h1" className={classes.hello}>
+            Hello,
+          </Typography>
+
+          <Typography
+            className={classes.heading}
+            color="secondary"
+            variant="h3"
+          >
+            I'm Wes Banyard.
           </Typography>
           <Typography className={classes.subheading} variant="h5">
             Front End Developer
           </Typography>
         </Box>
-        <Box
-          data-aos="fade-up"
-          data-aos-once="true"
-          data-aos-duration="500"
-          ease-in="true"
-          className={classes.portraitContainer}
-        >
-          <img
-            className={classes.portrait}
-            src={portrait}
-            alt="portrait of Wes"
-          />
-        </Box>
       </Box>
-
       <Link
         to="about-section"
         className={`${classes.button} animate__animated animate__bounces`}

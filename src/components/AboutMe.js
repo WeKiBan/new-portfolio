@@ -1,10 +1,8 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import computer from '../images/computer.jpg';
-import Grid from '@material-ui/core/Grid';
+import portrait from '../images/portrait.jpg';
 import { aboutData } from '../data';
-
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -12,30 +10,29 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    padding: theme.spacing(5, 0),
+    paddingTop: theme.spacing(5),
+    background: '#333333',
   },
   container: {
     width: '80%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  gridItem: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    [theme.breakpoints.down('md')]: {
+      flexDirection: 'column',
+    },
   },
-  heading: {
-    color: '#4731d4',
-    fontFamily: 'Raleway',
-    fontWeight: '400',
-    paddingBottom: theme.spacing(2),
-  },
-  computerImage: {
+  portrait: {
     maxWidth: 280,
+    borderRadius: '50%',
+    marginRight: 50,
+    [theme.breakpoints.down('md')]: {
+      marginRight: 0,
+    },
   },
   info: {
     padding: theme.spacing(2, 0),
+    color: '#f4f4f4',
     [theme.breakpoints.down('sm')]: {
       textAlign: 'center',
     },
@@ -59,24 +56,17 @@ function AboutMe() {
       animation-duration="500"
       className={classes.wrapper}
     >
-      <Typography className={classes.heading} variant="h4">
-        About Me
-      </Typography>
-      <Grid container className={classes.container}>
-        <Grid className={classes.gridItem} item md={6} sm={12}>
-          <img
-            src={computer}
-            className={classes.computerImage}
-            alt="computer"
-          />
-        </Grid>
+      <Box container className={classes.container}>
+        <Box className={classes.gridItem}>
+          <img className={classes.portrait} src={portrait} alt="my portrait" />
+        </Box>
 
-        <Grid md={6} sm={12} item className={classes.gridItem}>
+        <Box className={classes.gridItem}>
           {aboutData.info.map((paragraph) => (
             <Typography className={classes.info}>{paragraph}</Typography>
           ))}
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 }

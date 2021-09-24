@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
     flexDirection: 'column',
-    background: 'primary',
+    background: '#333333',
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 300,
@@ -22,12 +22,10 @@ const useStyles = makeStyles((theme) => ({
   button: {
     animation: 'bounce 0.6s infinite alternate',
     cursor: 'pointer',
-    color: '#4731d4',
     transition: '0.3s',
   },
   icon: {
     fontSize: 35,
-    color: '#4731d4',
   },
 }));
 
@@ -36,22 +34,23 @@ function Contact() {
   return (
     <Box className={classes.container}>
       <IconButton
+      color="primary"
         href="#hero"
         className={`${classes.button} animate__animated animate__bounces`}
       >
         <ArrowBackIosIcon className={classes.arrow} />
       </IconButton>
-      <Typography color="secondary" variant="h2">
+      <Typography style={{ color: 'orange' }} variant="h2">
         Contact Me
       </Typography>
-      <Typography>
+      <Typography style={{ color: 'white' }}>
         Have a question or want to work with me? Please get in touch!
       </Typography>
       <Box>
-        <IconButton>
+        <IconButton color="primary">
           <MailOutlineIcon className={classes.icon} />
         </IconButton>
-        <IconButton>
+        <IconButton color="primary">
           <LinkedInIcon className={classes.icon} />
         </IconButton>
       </Box>

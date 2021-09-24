@@ -52,6 +52,6 @@ img {
     transform: scale(1.2);
   }
 }
-body {
-  background-color: '#4731d4 !important';
+html {
+  background: '#333333';
 }

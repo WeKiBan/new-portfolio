@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'grey',
   },
   button: {
+    marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
   },
 }));
