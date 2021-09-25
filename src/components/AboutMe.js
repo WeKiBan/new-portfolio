@@ -48,15 +48,15 @@ function AboutMe() {
   const classes = useStyles();
 
   return (
-    <Box
-      id="about-section"
-      data-aos="fade"
-      data-aos-once="true"
-      ease-in="true"
-      animation-duration="500"
-      className={classes.wrapper}
-    >
-      <Box container className={classes.container}>
+    <Box id="about-section" className={classes.wrapper}>
+      <Box
+        data-aos="fade"
+        data-aos-once="true"
+        ease-in="true"
+        animation-duration="500"
+        container
+        className={classes.container}
+      >
         <Box className={classes.gridItem}>
           <img className={classes.portrait} src={portrait} alt="my portrait" />
         </Box>

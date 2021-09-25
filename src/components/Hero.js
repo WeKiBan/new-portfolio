@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   navLink: {
     color: 'orange',
     '&:hover': {
-      color: '#f4f4f4',
+      color: '#63A46C',
     },
   },
   navIcon: {
@@ -100,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.3s',
     '&:hover': {
       transform: 'scale(1.2)',
-      color: '#f4f4f4',
+      color: '#63A46C',
     },
   },
   knowMore: {

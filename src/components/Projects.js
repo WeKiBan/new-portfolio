@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 1200,
   },
+  heading: {
+    color: '#333333',
+    fontWeight: '200',
+  },
   waveTop: {
     position: 'absolute',
     width: '100%',
@@ -47,7 +51,9 @@ function Projects() {
           d="M-59.81,-46.88 C130.92,142.59 171.56,-112.98 568.85,74.50 L500.00,0.00 L0.00,0.00 Z"
         ></path>
       </svg>
-      <Typography variant="h4">My Work</Typography>
+      <Typography className={classes.heading} variant="h4">
+        Projects
+      </Typography>
       <Box className={classes.container}>
         {projectData.map((project) => {
           return <ProjectTile key={project.id} data={project} />;
