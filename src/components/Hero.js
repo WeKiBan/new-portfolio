@@ -74,12 +74,16 @@ const useStyles = makeStyles((theme) => ({
   },
   hello: {
     color: 'white',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: 60,
+    },
   },
   heading: {
     fontFamily: 'Raleway',
     fontWeight: 500,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 70,
+    fontSize: 40,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 60,
     },
   },
   subheading: {

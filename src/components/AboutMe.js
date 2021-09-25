@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       marginRight: 0,
     },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: 230,
+    },
   },
   info: {
     padding: theme.spacing(2, 0),

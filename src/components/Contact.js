@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
   arrow: {
     transform: 'rotate(90deg)',
   },
+  info: {
+    maxWidth: '80%',
+    textAlign: 'center',
+  },
   button: {
     animation: 'bounce 0.6s infinite alternate',
     cursor: 'pointer',
@@ -34,7 +38,7 @@ function Contact() {
   return (
     <Box className={classes.container}>
       <IconButton
-      color="primary"
+        color="primary"
         href="#hero"
         className={`${classes.button} animate__animated animate__bounces`}
       >
@@ -43,7 +47,7 @@ function Contact() {
       <Typography style={{ color: 'orange' }} variant="h2">
         Contact Me
       </Typography>
-      <Typography style={{ color: 'white' }}>
+      <Typography className={classes.info} style={{ color: 'white' }}>
         Have a question or want to work with me? Please get in touch!
       </Typography>
       <Box>
