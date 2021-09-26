@@ -118,7 +118,11 @@ function Hero() {
   const classes = useStyles();
 
   return (
-    <Box id="hero" className={classes.wrapper}>
+    <Box
+      style={{ height: window.innerHeight }}
+      id="hero"
+      className={classes.wrapper}
+    >
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
