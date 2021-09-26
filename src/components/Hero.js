@@ -117,17 +117,9 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero() {
   const classes = useStyles();
-  const [height, setHeight] = useState(window.innerHeight);
-
-  useLayoutEffect(() => {
-    function updateHeight() {
-      setHeight(window.innerHeight);
-    }
-    window.addEventListener('resize', updateHeight);
-  }, []);
 
   return (
-    <Box id="hero" style={{ height: height }} className={classes.wrapper}>
+    <Box id="hero" className={classes.wrapper}>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
