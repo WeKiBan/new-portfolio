@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -12,14 +12,12 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
-const windowHeight = window.innerHeight;
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: windowHeight,
+    height: window.innerHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
