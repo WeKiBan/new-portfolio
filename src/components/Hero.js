@@ -17,8 +17,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    minHeight: '100vh',
-    transition: 'height 1000s steps(1)',
+    height: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -128,10 +127,10 @@ function Hero() {
   return (
     <Box id="hero" style={{ height: height }} className={classes.wrapper}>
       {/* Start of Nav */}
-      <Box data-aos="fade-left" data-aos-once="true" className={classes.nav}>
+      <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
           href="#projects"
-          data-aos="fade-left"
+          data-aos="fade"
           data-aos-once="true"
           ease-in="true"
           className={classes.navLink}
@@ -141,7 +140,7 @@ function Hero() {
         <IconButton
           className={classes.navLink}
           href="#"
-          data-aos="fade-left"
+          data-aos="fade"
           data-aos-once="true"
           data-aos-delay="100"
           ease-in="true"
@@ -152,7 +151,7 @@ function Hero() {
           className={classes.navLink}
           target="_blank"
           href="https://github.com/Wekiban"
-          data-aos="fade-left"
+          data-aos="fade"
           data-aos-once="true"
           data-aos-delay="200"
           ease-in="true"
@@ -162,7 +161,7 @@ function Hero() {
         <IconButton
           target="_blank"
           href="https://www.linkedin.com/in/wes-banyard/"
-          data-aos="fade-left"
+          data-aos="fade"
           data-aos-once="true"
           data-aos-delay="300"
           ease-in="true"
@@ -175,7 +174,7 @@ function Hero() {
       {/* Start Of Main Container */}
       <Box className={classes.container}>
         <Box
-          data-aos="fade-down"
+          data-aos="fade"
           data-aos-once="true"
           data-aos-delay="300"
           ease-in="true"
