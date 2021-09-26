@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: '100%',
+    height: window.outerHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
