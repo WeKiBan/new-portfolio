@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
-    width: '100vw',
-    height: '-webkit-fill-available',
+    width: '100%',
+    height: window.innerHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
+    backgroundAttachment: 'fixed',
   },
   nav: {
     position: 'absolute',
