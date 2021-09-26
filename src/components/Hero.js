@@ -27,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center center',
     backgroundAttachment: 'fixed',
     zIndex: -1,
+    transition: 'height 999999s',
   },
   nav: {
     position: 'absolute',
