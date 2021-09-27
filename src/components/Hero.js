@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: 'calc(100vh - 50px )',
+    height: window.innerHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -119,11 +119,7 @@ function Hero() {
   const classes = useStyles();
 
   return (
-    <Box
-      style={{ height: window.innerHeight }}
-      id="hero"
-      className={classes.wrapper}
-    >
+    <Box id="hero" className={classes.wrapper}>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
