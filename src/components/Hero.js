@@ -12,16 +12,12 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
-window.addEventListener('resize', function (e) {
-  e.preventDefault();
-});
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: 'calc(100vh - 60px)',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -32,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: ' no-repeat',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    height: 'calc(100vh - 60px)',
+    height: '100%',
     width: '100vw',
     position: 'fixed',
     zIndex: -1,
