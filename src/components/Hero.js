@@ -30,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
   },
   nav: {
     position: 'absolute',
