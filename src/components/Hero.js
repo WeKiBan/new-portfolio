@@ -96,6 +96,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       fontSize: 60,
     },
+    [theme.breakpoints.down('sm')]: {
+      '@media (orientation: landscape)': {
+        fontSize: 40,
+      },
+    },
   },
   heading: {
     fontFamily: 'Raleway',
@@ -103,6 +108,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 40,
     [theme.breakpoints.up('sm')]: {
       fontSize: 60,
+    },
+    [theme.breakpoints.down('md')]: {
+      '@media (orientation: landscape)': {
+        fontSize: 40,
+      },
     },
   },
   subheading: {
