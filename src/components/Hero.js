@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
+    maxHeight: '-webkit-fill-available',
     width: '100%',
     height: '100vh',
     display: 'flex',
