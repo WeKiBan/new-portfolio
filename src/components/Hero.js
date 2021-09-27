@@ -17,14 +17,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: Math.min(
-      document.documentElement.clientHeight,
-      window.innerHeight || 0
-    ),
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    transition: 'height 999999s',
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${background})`,
     backgroundSize: 'cover',
