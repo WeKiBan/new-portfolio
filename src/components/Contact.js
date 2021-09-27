@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     background: '#333333',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 300,
+    minHeight: 220,
   },
   arrow: {
     transform: 'rotate(90deg)',
