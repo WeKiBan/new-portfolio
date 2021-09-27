@@ -133,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
     transition: '0.3s',
     '&:hover': {
       transform: 'scale(1.2)',
-      color: '#63A46C',
+      color: '#f4f4f4',
     },
   },
   knowMore: {
