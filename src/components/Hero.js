@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     height: '100vh',
+    maxHeight: '-webkit-fill-available',
     width: '100vw',
     position: 'fixed',
     zIndex: -1,
