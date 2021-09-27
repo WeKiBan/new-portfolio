@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: ' no-repeat',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    height: '100%',
+    height: '100vh',
     width: '100vw',
     position: 'fixed',
     zIndex: -1,
