@@ -17,7 +17,10 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: '650px',
+    height: Math.min(
+      document.documentElement.clientHeight,
+      window.innerHeight || 0
+    ),
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
