@@ -12,12 +12,14 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
+const windowHeight = window.innerHeight;
+
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: window.outerHeight,
+    height: windowHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
