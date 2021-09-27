@@ -16,13 +16,14 @@ window.addEventListener('resize', function (e) {
   e.preventDefault();
 });
 
+const addressBarHeight = window.outerHeight - window.innerHeight;
+
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
-    maxHeight: '-webkit-fill-available',
     width: '100%',
-    height: '100vh',
+    height: `calc(100vh - ${addressBarHeight})`,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -33,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: ' no-repeat',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    height: '100vh',
-    maxHeight: '-webkit-fill-available',
+    height: `calc(100vh - ${addressBarHeight})`,
     width: '100vw',
     position: 'fixed',
     zIndex: -1,
