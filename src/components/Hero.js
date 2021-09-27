@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -12,21 +12,16 @@ import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    window.scrollTo(0, 1);
-  }, 0);
-});
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
-    height: '100vh',
+    height: window.innerHeight,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    transition: 'height 1s ease',
   },
   bg: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -34,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: ' no-repeat',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
-    height: '100vh',
+    height: window.innerHeight,
     width: '100%',
     position: 'fixed',
     zIndex: -1,
+    transition: 'height 1s ease',
   },
   nav: {
     position: 'absolute',
@@ -145,10 +141,20 @@ const useStyles = makeStyles((theme) => ({
 
 function Hero() {
   const classes = useStyles();
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowHeight(window.innerHeight);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <Box id="hero" className={classes.wrapper}>
-      <div className={classes.bg}></div>
+    <Box style={{ height: windowHeight }} id="hero" className={classes.wrapper}>
+      <div style={{ height: windowHeight }} className={classes.bg}></div>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
