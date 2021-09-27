@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     overflow: 'hidden',
     width: '100%',
+    height: '650px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -117,13 +118,8 @@ const useStyles = makeStyles((theme) => ({
 function Hero() {
   const classes = useStyles();
 
-  const [height, setHeight] = useState();
-  useEffect(() => {
-    setHeight(window.innerHeight);
-  }, []);
-
   return (
-    <Box id="hero" style={{ height: height }} className={classes.wrapper}>
+    <Box id="hero" className={classes.wrapper}>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
