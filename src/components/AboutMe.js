@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import portrait from '../images/portrait.jpg';
+import portrait from '../images/portrait.jpeg';
 import { aboutData } from '../data';
 
 const useStyles = makeStyles((theme) => ({
