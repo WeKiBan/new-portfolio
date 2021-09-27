@@ -93,8 +93,8 @@ const useStyles = makeStyles((theme) => ({
   },
   hello: {
     color: 'white',
-    [theme.breakpoints.down('sm')]: {
-      fontSize: 60,
+    [theme.breakpoints.down('md')]: {
+      fontSize: 50,
     },
     [theme.breakpoints.down('sm')]: {
       '@media (orientation: landscape)': {

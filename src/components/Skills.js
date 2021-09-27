@@ -77,7 +77,7 @@ function Skills() {
         <Grid
           data-aos="fade-left"
           data-aos-once="true"
-          data-aos-duration="500" 
+          data-aos-duration="500"
           ease-in="true"
           item
           className={classes.logo}

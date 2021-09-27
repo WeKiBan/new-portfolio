@@ -28,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     color: '#333333',
     fontWeight: '200',
+    borderBottom: '2px solid orange',
+    paddingBottom: '5px',
   },
   waveTop: {
     position: 'absolute',
