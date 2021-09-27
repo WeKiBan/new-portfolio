@@ -77,8 +77,7 @@ function Skills() {
         <Grid
           data-aos="fade-left"
           data-aos-once="true"
-          data-aos-duration="500"
-          data-aos-delay="200"
+          data-aos-duration="500" 
           ease-in="true"
           item
           className={classes.logo}
@@ -93,7 +92,6 @@ function Skills() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-duration="500"
-          data-aos-delay="300"
           ease-in="true"
           item
           className={classes.logo}
@@ -108,7 +106,6 @@ function Skills() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-duration="500"
-          data-aos-delay="400"
           ease-in="true"
           item
           className={classes.logo}
@@ -123,7 +120,6 @@ function Skills() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-duration="500"
-          data-aos-delay="500"
           ease-in="true"
           item
           className={classes.logo}
@@ -138,7 +134,6 @@ function Skills() {
           data-aos="fade-left"
           data-aos-once="true"
           data-aos-duration="500"
-          data-aos-delay="600"
           ease-in="true"
           item
           className={classes.logo}
