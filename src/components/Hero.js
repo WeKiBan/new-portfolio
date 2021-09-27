@@ -16,8 +16,6 @@ window.addEventListener('resize', function (e) {
   e.preventDefault();
 });
 
-
-
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
@@ -47,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     width: '100%',
     padding: theme.spacing(1),
-    [theme.breakpoints.up('md')]: {
+    '@media (orientation: landscape)': {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'flex-end',
@@ -70,6 +68,11 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media (orientation: landscape)': {
+      width: '70%',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+    },
     [theme.breakpoints.up('md')]: {
       width: '70%',
       justifyContent: 'flex-start',
@@ -82,6 +85,9 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(2),
     textAlign: 'center',
     [theme.breakpoints.up('md')]: {
+      textAlign: 'left',
+    },
+    '@media (orientation: landscape)': {
       textAlign: 'left',
     },
   },
