@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     url(${background})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
+    backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
   },
   nav: {
