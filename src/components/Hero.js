@@ -13,12 +13,13 @@ import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
 const windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
-    width: '100%',
+    width: windowWidth,
     height: windowHeight,
     display: 'flex',
     justifyContent: 'center',
