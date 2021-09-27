@@ -44,7 +44,7 @@ function Contact() {
       >
         <ArrowBackIosIcon className={classes.arrow} />
       </IconButton>
-      <Typography style={{ color: 'orange' }} variant="h2">
+      <Typography style={{ color: 'orange' }} variant="h4">
         Contact Me
       </Typography>
       <Typography className={classes.info} style={{ color: 'white' }}>
