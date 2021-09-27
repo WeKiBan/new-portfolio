@@ -25,12 +25,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  bg: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(${background})`,
-    backgroundSize: 'auto 50%',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed',
+    backgroundRepeat: ' no-repeat',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    height: '100vh',
+    width: '100vw',
+    position: 'fixed',
+    zIndex: -1,
   },
   nav: {
     position: 'absolute',
@@ -123,6 +128,7 @@ function Hero() {
 
   return (
     <Box id="hero" className={classes.wrapper}>
+      <div className={classes.bg}></div>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton
