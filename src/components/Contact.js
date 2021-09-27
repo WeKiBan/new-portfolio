@@ -51,10 +51,10 @@ function Contact() {
         Have a question or want to work with me? Please get in touch!
       </Typography>
       <Box>
-        <IconButton color="primary">
+        <IconButton color="secondary">
           <MailOutlineIcon className={classes.icon} />
         </IconButton>
-        <IconButton color="primary">
+        <IconButton color="secondary">
           <LinkedInIcon className={classes.icon} />
         </IconButton>
       </Box>
