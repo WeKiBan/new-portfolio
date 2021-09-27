@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
     height: '100vh',
-    width: '100vw',
+    width: '100%',
     position: 'fixed',
     zIndex: -1,
   },
@@ -140,9 +140,53 @@ const useStyles = makeStyles((theme) => ({
 function Hero() {
   const classes = useStyles();
 
+  const [addressBarHeight, setAddressBarHeight] = useState('');
+
+  const getScrollBarSize = () => {
+    var inner = document.createElement('p');
+    inner.style.width = '100%';
+    inner.style.height = '100%';
+
+    var outer = document.createElement('div');
+    outer.style.position = 'absolute';
+    outer.style.top = '0px';
+    outer.style.left = '0px';
+    outer.style.visibility = 'hidden';
+    outer.style.width = '100px';
+    outer.style.height = '100px';
+    outer.style.overflow = 'hidden';
+    outer.appendChild(inner);
+
+    document.body.appendChild(outer);
+
+    var w1 = inner.offsetWidth;
+    var h1 = inner.offsetHeight;
+    outer.style.overflow = 'scroll';
+    var w2 = inner.offsetWidth;
+    var h2 = inner.offsetHeight;
+    if (w1 === w2) w2 = outer.clientWidth;
+    if (h1 === h2) h2 = outer.clientHeight;
+
+    document.body.removeChild(outer);
+
+    return [w1 - w2, h1 - h2];
+  };
+
+  useEffect(() => {
+    const height = getScrollBarSize();
+    setAddressBarHeight(height);
+  }, []);
+
   return (
-    <Box id="hero" className={classes.wrapper}>
-      <div className={classes.bg}></div>
+    <Box
+      style={{ height: `calc(100vh - ${addressBarHeight})` }}
+      id="hero"
+      className={classes.wrapper}
+    >
+      <div
+        style={{ height: `calc(100vh - ${addressBarHeight})` }}
+        className={classes.bg}
+      ></div>
       {/* Start of Nav */}
       <Box data-aos="fade" data-aos-once="true" className={classes.nav}>
         <IconButton

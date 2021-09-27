@@ -65,8 +65,10 @@ function AboutMe() {
         </Box>
 
         <Box className={classes.gridItem}>
-          {aboutData.info.map((paragraph) => (
-            <Typography className={classes.info}>{paragraph}</Typography>
+          {aboutData.info.map((paragraph, index) => (
+            <Typography key={index} className={classes.info}>
+              {paragraph}
+            </Typography>
           ))}
         </Box>
       </Box>
