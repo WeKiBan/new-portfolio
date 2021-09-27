@@ -6,6 +6,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
 
 *,
 *:before,
