@@ -23,7 +23,7 @@ export const projectData = [
     title: 'Landing Page For Furniture Website',
     info: 'Landing Page For Furniture Website built with React, and styled components and  React Hooks',
     info2: 'React, React Hooks and Styled Components',
-    url: 'https://wekiban.github.io/room/',
+    url: 'https://wekiban.github.io/Room/',
     repo: 'https://github.com/WeKiBan/Room',
   },
   {
