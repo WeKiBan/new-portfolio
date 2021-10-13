@@ -4,6 +4,7 @@ import pbTimer from './images/pbtimer.png';
 import spoonly from './images/Spoonly.png';
 import taski from './images/taski.png';
 import weather from './images/weather.png';
+import room from './images/Room.png';
 
 // ABOUT DATA
 export const aboutData = {
@@ -16,6 +17,15 @@ export const aboutData = {
 
 // PROJECTS DATA
 export const projectData = [
+  {
+    id: nanoid(),
+    img: room,
+    title: 'Landing Page For Furniture Website',
+    info: 'Landing Page For Furniture Website built with React, and styled components and  React Hooks',
+    info2: 'React, React Hooks and Styled Components',
+    url: 'https://wekiban.github.io/room/',
+    repo: 'https://github.com/WeKiBan/Room',
+  },
   {
     id: nanoid(),
     img: spoonly,
