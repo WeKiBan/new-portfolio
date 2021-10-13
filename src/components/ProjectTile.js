@@ -51,16 +51,7 @@ function ProjectTile({ data }) {
           {info2}
         </Typography>
       </Grid>
-      <Grid
-        onClick={(e) => {
-          e.preventDefault();
-          window.open(url, '_blank');
-        }}
-        className={classes.imgContainer}
-        item
-        xs={12}
-        sm={8}
-      >
+      <Grid className={classes.imgContainer} item xs={12} sm={8}>
         <Tilt
           options={{
             reverse: false,
@@ -74,7 +65,14 @@ function ProjectTile({ data }) {
             easing: 'cubic-bezier(.03,.98,.52,.99)',
           }}
         >
-          <img src={img} alt="website screenshot" />
+          <img
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(url, '_blank');
+            }}
+            src={img}
+            alt="website screenshot"
+          />
         </Tilt>
         <Box>
           <Button
