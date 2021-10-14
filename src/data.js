@@ -5,6 +5,7 @@ import spoonly from './images/Spoonly.png';
 import taski from './images/taski.png';
 import weather from './images/weather.png';
 import room from './images/Room.png';
+import portfolio from './images/portfolio.png'
 
 // ABOUT DATA
 export const aboutData = {
@@ -25,6 +26,15 @@ export const projectData = [
     info2: 'React, React Hooks and Styled Components',
     url: 'https://wekiban.github.io/Room/',
     repo: 'https://github.com/WeKiBan/Room',
+  },
+  {
+    id: nanoid(),
+    img: portfolio,
+    title: 'This Portfolio',
+    info: 'A showcase of some of my work',
+    info2: 'React, React Hooks and Material-UI',
+    url: 'https://wesbanyard.dev',
+    repo: 'https://github.com/WeKiBan/new-portfolio',
   },
   {
     id: nanoid(),
