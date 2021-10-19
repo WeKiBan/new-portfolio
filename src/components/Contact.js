@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Contact() {
+function Contact({ english }) {
   const classes = useStyles();
   return (
     <Box className={classes.container}>
@@ -45,10 +45,12 @@ function Contact() {
         <ArrowBackIosIcon className={classes.arrow} />
       </IconButton>
       <Typography style={{ color: 'orange', fontWeight: 100 }} variant="h4">
-        Contact Me
+        {english ? 'Contact Me' : 'Contattami'}
       </Typography>
       <Typography className={classes.info} style={{ color: 'white' }}>
-        Have a question or want to work with me? Please get in touch!
+        {english
+          ? 'Have a question or want to work with me? Please get in touch!'
+          : 'Hai una domanda o vuoi lavorare con me? Si prega di mettersi in contatto!'}
       </Typography>
       <Box>
         <IconButton href="mailto:wes.banyard@googlemail.com" color="secondary">

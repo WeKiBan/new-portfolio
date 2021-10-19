@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Projects() {
+function Projects({ english }) {
   const classes = useStyles();
   return (
     <Box className={classes.wrapper} id="projects">
@@ -54,11 +54,13 @@ function Projects() {
         ></path>
       </svg>
       <Typography className={classes.heading} variant="h4">
-        Projects
+        {english ? 'Projects' : 'Progetti'}
       </Typography>
       <Box className={classes.container}>
         {projectData.map((project) => {
-          return <ProjectTile key={project.id} data={project} />;
+          return (
+            <ProjectTile key={project.id} data={project} english={english} />
+          );
         })}
       </Box>
     </Box>

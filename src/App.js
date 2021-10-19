@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Skills from './components/Skills';
@@ -10,14 +11,15 @@ import theme from './theme';
 import { ThemeProvider } from '@material-ui/core';
 
 function App() {
+  const [english, setEnglish] = useState(true);
   Aos.init();
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Hero />
-        <AboutMe />
-        <Skills />
-        <Projects />
+        <Hero english={english} setEnglish={setEnglish} />
+        <AboutMe english={english} />
+        <Skills english={english} />
+        <Projects english={english} />
         <Contact />
       </div>
     </ThemeProvider>

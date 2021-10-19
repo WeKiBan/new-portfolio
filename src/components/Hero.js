@@ -9,6 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import 'aos/dist/aos.css';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
+import Switch from '@material-ui/core/Switch';
 import { Link } from 'react-scroll';
 import background from '../images/bg-computer.jpg';
 
@@ -34,6 +35,22 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     zIndex: -1,
     transition: 'height 1s ease',
+  },
+  switch: {
+    color: theme.palette.secondary,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 10000,
+    '@media (orientation: landscape)': {
+      flexDirection: 'column',
+      marginRight: '5px',
+    },
+  },
+  toggle: {
+    '@media (orientation: landscape)': {
+      transform: 'rotate(90deg)',
+    },
   },
   nav: {
     position: 'absolute',
@@ -141,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Hero() {
+function Hero({ english, setEnglish }) {
   const classes = useStyles();
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -200,6 +217,19 @@ function Hero() {
         >
           <LinkedInIcon className={classes.navIcon} />
         </IconButton>
+        <div className={classes.switch}>
+          <Typography color="secondary" variant="body1">
+            EN
+          </Typography>
+          <Switch
+            checked={!english}
+            onChange={() => setEnglish(!english)}
+            className={classes.toggle}
+          />
+          <Typography color="secondary" variant="body1">
+            IT
+          </Typography>
+        </div>
       </Box>
       {/* End of Nav */}
       {/* Start Of Main Container */}
@@ -212,7 +242,7 @@ function Hero() {
           className={classes.textContainer}
         >
           <Typography color="primary" variant="h1" className={classes.hello}>
-            Hello,
+            {english ? 'Hello' : 'Ciao'}
           </Typography>
 
           <Typography
@@ -220,7 +250,7 @@ function Hero() {
             color="secondary"
             variant="h3"
           >
-            I'm Wes Banyard.
+            {english ? "I'm Wes Banyard" : 'Sono Wes Banyard'}
           </Typography>
           <Typography className={classes.subheading} variant="h5">
             Front End Developer
@@ -231,7 +261,9 @@ function Hero() {
         to="about-section"
         className={`${classes.button} animate__animated animate__bounces`}
       >
-        <Typography className={classes.knowMore}>Know More</Typography>
+        <Typography className={classes.knowMore}>
+          {english ? 'Know More' : 'Per Saperne Di Più'}
+        </Typography>
         <ExpandMoreIcon className={classes.arrow} />
       </Link>
     </Box>

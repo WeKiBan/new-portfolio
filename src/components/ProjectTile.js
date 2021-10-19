@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function ProjectTile({ data }) {
+function ProjectTile({ data, english }) {
   const classes = useStyles();
   const { img, title, info, info2, url, repo } = data;
 
@@ -38,10 +38,10 @@ function ProjectTile({ data }) {
     <Grid className={classes.wrapper} container>
       <Grid className={classes.infoContainer} item xs={12} sm={4}>
         <Typography gutterBottom variant="h5" color="initial">
-          {title}
+          {english ? title[0] : title[1]}
         </Typography>
         <Typography gutterBottom color="initial">
-          {info}
+          {english ? info[0] : info[1]}
         </Typography>
         <Typography
           className={classes.technologies}
@@ -82,7 +82,7 @@ function ProjectTile({ data }) {
             variant="contained"
             href={url}
           >
-            See Live
+            {english ? 'Live' : 'Vivo'}
           </Button>
 
           <Button
@@ -92,7 +92,7 @@ function ProjectTile({ data }) {
             variant="contained"
             href={repo}
           >
-            Source Code
+            {english ? 'Code' : 'Codice'}
           </Button>
         </Box>
       </Grid>

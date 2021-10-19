@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AboutMe() {
+function AboutMe({ english }) {
   const classes = useStyles();
 
   return (
@@ -65,11 +65,17 @@ function AboutMe() {
         </Box>
 
         <Box className={classes.gridItem}>
-          {aboutData.info.map((paragraph, index) => (
-            <Typography key={index} className={classes.info}>
-              {paragraph}
-            </Typography>
-          ))}
+          {english
+            ? aboutData.info[0].map((paragraph, index) => (
+                <Typography key={index} className={classes.info}>
+                  {paragraph}
+                </Typography>
+              ))
+            : aboutData.info[1].map((paragraph, index) => (
+                <Typography key={index} className={classes.info}>
+                  {paragraph}
+                </Typography>
+              ))}
         </Box>
       </Box>
     </Box>

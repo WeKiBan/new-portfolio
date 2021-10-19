@@ -51,12 +51,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Skills() {
+function Skills({ english }) {
   const classes = useStyles();
   return (
     <Box className={classes.wrapper}>
       <Typography className={classes.heading} variant="h4">
-        Skills
+        {english ? 'Skills' : 'Abilità'}
       </Typography>
       <Grid container className={classes.skills}>
         <Grid
