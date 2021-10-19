@@ -11,7 +11,7 @@ import theme from './theme';
 import { ThemeProvider } from '@material-ui/core';
 
 function App() {
-  const [english, setEnglish] = useState(true);
+  const [english, setEnglish] = useState(false);
   Aos.init();
   return (
     <ThemeProvider theme={theme}>
