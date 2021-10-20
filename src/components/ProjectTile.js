@@ -41,7 +41,7 @@ function ProjectTile({ data, english }) {
           {title[+english]}
         </Typography>
         <Typography gutterBottom color="initial">
-          {title[+english]}
+          {info[+english]}
         </Typography>
         <Typography
           className={classes.technologies}
