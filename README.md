@@ -31,7 +31,8 @@ As I will be applying for Web Development positions in Italy I decided to add th
 
 this was achieved by having 2 lots of data stored in the data file under each key as shown below
 
-```{
+```react
+{
     id: nanoid(),
     img: room,
     title: [
@@ -50,7 +51,7 @@ this was achieved by having 2 lots of data stored in the data file under each ke
 
 and then making use of the useState hook to keep track of which language is currently active and selecting either the first or second item in each array depending on the setting. an example of how this works can be seen below.
 
-```
+```react
 english ?
 aboutData.info[0].map((paragraph, index) => (
 <Typography key={index} className={classes.info}>
