@@ -8,11 +8,12 @@ A responsive website to showcase some of my work.
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- [React Animate on Scroll](https://www.npmjs.com/package/react-animate-on-scroll) - React Animation library -[React-Tilt] - A plug in which gives a tilting effect to react components when hovered over
-- [React](https://reactjs.org/) - JS library
-- [MaterialUI](https://mui.com/) - React Library
+- Semantic HTML5 markup.
+- CSS custom properties.
+- [React Animate on Scroll](https://www.npmjs.com/package/react-animate-on-scroll)
+- React Animation library. -[React-Tilt] - A plug in which gives a tilting effect to react components when hovered over.
+- [React](https://reactjs.org/) - JS library.
+- [MaterialUI](https://mui.com/) - React Library.
 
 ### What I learned
 
