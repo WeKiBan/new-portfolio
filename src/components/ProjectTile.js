@@ -38,10 +38,10 @@ function ProjectTile({ data, english }) {
     <Grid className={classes.wrapper} container>
       <Grid className={classes.infoContainer} item xs={12} sm={4}>
         <Typography gutterBottom variant="h5" color="initial">
-          {english ? title[0] : title[1]}
+          {title[+english]}
         </Typography>
         <Typography gutterBottom color="initial">
-          {english ? info[0] : info[1]}
+          {title[+english]}
         </Typography>
         <Typography
           className={classes.technologies}
