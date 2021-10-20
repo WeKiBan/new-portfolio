@@ -31,7 +31,7 @@ As I will be applying for Web Development positions in Italy I decided to add th
 
 ![](src/images/toggleScreenshot.png)
 
-this was achieved by having 2 lots of data stored in the data file under each key as shown below
+this was achieved by having two lots of data stored in the data file under each key as shown below
 
 ```javascript
 {
