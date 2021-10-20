@@ -20,9 +20,9 @@ As I will be applying for Web Development positions in Italy I decided to add th
 
 ## Get started
 
-From your command line, first clone this repo:
-
 ### Clone this repository
+
+From your command line, first clone this repo: https://github.com/WeKiBan/new-portfolio
 
 `$ git clone https://github.com/WeKiBan/new-portfolio`
 
@@ -34,9 +34,9 @@ From your command line, first clone this repo:
 
 `$ git remote remove origin`
 
-Then you can install the dependencies using NPM:
-
 ### Install dependencies
+
+Then you can install the dependencies using NPM:
 
 `$ npm install`
 
