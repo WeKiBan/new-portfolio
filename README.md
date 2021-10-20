@@ -88,8 +88,6 @@ From your command line, first clone this repo: https://github.com/WeKiBan/new-po
 
 ### Install dependencies
 
-Then you can install the dependencies using NPM:
-
 `$ npm install`
 
 ### Start development server
