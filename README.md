@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# React Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A website to showcase some of my work. Built Using React, React Hooks and MaterialUI.
 
-## Available Scripts
+## Lessons Learned
 
-In the project directory, you can run:
+My second project using the MaterialUI framework. During this project I feel like my knowledge of this framework has improved A lot. I learned how to utilise the theme feature of MaterialUI to share global css variables throughout the project which allows for quicker styling and also makes future changes much easier.
 
-### `npm start`
+I believe this project has given me a solid grasp of the MaterialUI framework and it is definitely a tool I would consider using in the future to speed up the development of future projects.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To make the page more visually pleasing I decided to use an animation library called Animate on Scroll which, as the name suggests, fires animations as the user scrolls down the page. I believe this makes the user experience a much more engaging one rather than just static information on the page. I also used another plugin called Tilt which adds a nice animation to the project tile images when the user hovers over them.
 
-### `npm test`
+For this project I decided to store the data which is displayed on the page in a separate data file which can be easily updated if I need to add new projects or remove old ones.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As I will be applying for Web Development positions in Italy I decided to add the functionality to switch languages between Italian and English using a toggle button in the nav bar as shown below.
 
-### `npm run build`
+![](src/images/toggleScreenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+## Deployment
+Deployed with Netlify.
+
+## Get started
+From your command line, first clone this repo:
+
+## Clone this repository
+
+$ git clone https://github.com/WeKiBan/new-portfolio
+
+## Go into the repository
+
+$ cd cv-app
+
+## Remove current origin repository
+
+$ git remote remove origin
+Then you can install the dependencies using NPM:
+
+Using NPM:
+
+## Install dependencies
+
+$ npm install
+
+## Start development server
+
+$ npm start
+
+You should now have a development server running in your default browser.
+
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See the section about deployment for more information.
