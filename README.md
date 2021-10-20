@@ -75,7 +75,7 @@ From your command line, first clone this repo: https://github.com/WeKiBan/new-po
 
 ### Go into the repository
 
-`$ cd cv-app`
+`$ cd new-portfolio`
 
 ### Remove current origin repository
 
