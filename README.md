@@ -1,8 +1,19 @@
 # React Portfolio
 
-A website to showcase some of my work. Built Using React, React Hooks and MaterialUI.
+A responsive website to showcase some of my work.
 
-## Lessons Learned
+### screenshot
+
+![](src/images/heroScreenshot.png)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- [React](https://reactjs.org/) - JS library
+- [MaterialUI](https://mui.com/) - React Library
+
+## What I learned
 
 My second project using the MaterialUI framework. During this project I feel like my knowledge of this framework has improved A lot. I learned how to utilise the theme feature of MaterialUI to share global css variables throughout the project which allows for quicker styling and also makes future changes much easier.
 
@@ -17,6 +28,44 @@ For this project I decided to store the data which is displayed on the page in a
 As I will be applying for Web Development positions in Italy I decided to add the functionality to switch languages between Italian and English using a toggle button in the nav bar as shown below.
 
 ![](src/images/toggleScreenshot.png)
+
+this was achieved by having 2 lots of data stored in the data file under each key as shown below
+
+````{
+    id: nanoid(),
+    img: room,
+    title: [
+      'Landing Page For Furniture Website',
+      'Pagina di destinazione per il sito web di mobili',
+    ],
+    info: [
+      'Landing Page For Furniture Website built with React, and styled components and  React Hooks',
+      'Pagina per il sito Web di mobili costruito con React, Styled Components e React Hooks',
+    ],
+    info2: 'React, React Hooks and Styled Components',
+    url: 'https://wekiban.github.io/Room/',
+    repo: 'https://github.com/WeKiBan/Room',
+  },```
+
+  and then making use of the useState hook to keep track of which language is currently active and selecting either the first or second item in each array depending on the setting. an example of how this works can be seen below.
+
+````
+
+english
+? aboutData.info[0].map((paragraph, index) => (
+<Typography key={index} className={classes.info}>
+{paragraph}
+</Typography>
+))
+: aboutData.info[1].map((paragraph, index) => (
+<Typography key={index} className={classes.info}>
+{paragraph}
+</Typography>
+))```
+
+if english is true the first option is returned otherwise the second option will be returned making use of conditional rendering
+
+This is the first time I have approached a project this way and I believe it will come in very useful in future projects.
 
 ## Get started
 
@@ -40,7 +89,7 @@ Then you can install the dependencies using NPM:
 
 `$ npm install`
 
-# Start development server
+### Start development server
 
 `$ npm start`
 
