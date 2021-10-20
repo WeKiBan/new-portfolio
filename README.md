@@ -45,12 +45,13 @@ this was achieved by having 2 lots of data stored in the data file under each ke
     info2: 'React, React Hooks and Styled Components',
     url: 'https://wekiban.github.io/Room/',
     repo: 'https://github.com/WeKiBan/Room',
-  },```
+  }
+  ```
 
   and then making use of the useState hook to keep track of which language is currently active and selecting either the first or second item in each array depending on the setting. an example of how this works can be seen below.
 
-````
 
+```
 english
 ? aboutData.info[0].map((paragraph, index) => (
 <Typography key={index} className={classes.info}>
@@ -94,3 +95,4 @@ Then you can install the dependencies using NPM:
 `$ npm start`
 
 You should now have a development server running in your default browser.
+````
