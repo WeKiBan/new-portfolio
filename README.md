@@ -18,38 +18,30 @@ As I will be applying for Web Development positions in Italy I decided to add th
 
 ![](src/images/toggleScreenshot.png)
 
+## Get started
 
-## Deployment
-Deployed with Netlify.
-
-Get started
 From your command line, first clone this repo:
 
-# Clone this repository
+### Clone this repository
 
-$ git clone https://github.com/WeKiBan/new-portfolio
+`$ git clone https://github.com/WeKiBan/new-portfolio`
 
-# Go into the repository
+### Go into the repository
 
-$ cd cv-app
+`$ cd cv-app`
 
-# Remove current origin repository
+### Remove current origin repository
 
-$ git remote remove origin
+`$ git remote remove origin`
+
 Then you can install the dependencies using NPM:
 
-Using NPM:
+### Install dependencies
 
-# Install dependencies
-
-$ npm install
+`$ npm install`
 
 # Start development server
 
-$ npm start
+`$ npm start`
+
 You should now have a development server running in your default browser.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-See the section about deployment for more information.
