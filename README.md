@@ -51,26 +51,19 @@ this was achieved by having 2 lots of data stored in the data file under each ke
   }
 ```
 
-and then making use of the useState hook to keep track of which language is currently active and selecting either the first or second item in each array depending on the setting. an example of how this works can be seen below.
+and then making use of the useState hook to keep track of which language is currently active and selecting either the first or second item in each array depending on the setting. An example of how this works can be seen below:
 
 ```react
-english ?
-aboutData.info[0].map((paragraph, index) => (
-<Typography key={index} className={classes.info}>
-{paragraph}
-</Typography>
-))
-:
-aboutData.info[1].map((paragraph, index) => (
-<Typography key={index} className={classes.info}>
-{paragraph}
-</Typography>
-))
+aboutData.info[+english].map((paragraph, index) => (
+            <Typography key={index} className={classes.info}>
+              {paragraph}
+            </Typography>
+          ))
 ```
 
-if english is true the first option is returned otherwise the second option will be returned making use of conditional rendering
+Applying the + converts the boolean to a number so if english is true the second option is returned otherwise the first option will be returned.
 
-This is the first time I have approached a project this way and I believe it will come in very useful in future projects.
+This is the first time I have approached a project this way and I believe it will come in very useful in future projects to keep all the website data in the same place and make it more manageable.
 
 ## Get started
 
