@@ -13,7 +13,7 @@ export const aboutData = {
   info: [
     [
       "Sono Wes, uno sviluppatore web del West Midlands, Inghilterra, che attualmente vive a Milano. Sono appassionato di tecnologia e amo creare applicazioni innovative che semplifichino la vita delle persone. Trovo l'apprendimento di nuove tecnologie e la creazione di soluzioni a problemi difficili estremamente gratificante.",
-      'Al momento trascorro le mie serate a migliorare la mia conoscenza di React e Material UI. Il mio obiettivo a lungo termine è diventare uno sviluppatore full stack efficente, in grado di trasformare in modo efficace grandi idee in prodotti funzionanti.',
+      'Al momento trascorro le mie serate a migliorare la mia conoscenza di React e Styled-Components. Il mio obiettivo a lungo termine è diventare uno sviluppatore full stack efficente, in grado di trasformare in modo efficace grandi idee in prodotti funzionanti.',
     ],
     [
       "I'm Wes, a web developer from the West Midlands currently living in Milan, Italy. I'm passionate about tech and I love creating innovative applications that make people's lives easier. I find learning new technologies and creating solutions to difficult problems massively rewarding.",
