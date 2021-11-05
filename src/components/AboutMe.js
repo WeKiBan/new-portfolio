@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   info: {
     padding: theme.spacing(2, 0),
     color: '#f4f4f4',
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       textAlign: 'center',
     },
   },
