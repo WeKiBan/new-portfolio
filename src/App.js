@@ -20,7 +20,7 @@ function App() {
         <AboutMe english={english} />
         <Skills english={english} />
         <Projects english={english} />
-        <Contact />
+        <Contact english={english} />
       </div>
     </ThemeProvider>
   );
