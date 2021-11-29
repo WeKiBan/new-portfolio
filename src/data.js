@@ -6,6 +6,7 @@ import taski from './images/taski.png';
 import weather from './images/weather.png';
 import room from './images/Room.png';
 import portfolio from './images/portfolio.png';
+import ipTracker from './images/ipTrackerScreenshot.png';
 
 // ABOUT DATA
 export const aboutData = {
@@ -24,6 +25,22 @@ export const aboutData = {
 
 // PROJECTS DATA
 export const projectData = [
+  {
+    id: nanoid(),
+    img: ipTracker,
+    title: [
+      'App per il monitoraggio degli indirizzi IP',
+      'IP Address Tracker App',
+    ],
+    info: [
+      "Applicazione che tiene traccia della posizione di un indirizzo IP fornito dall'utente",
+      'An application which tracks the location of an IP address provided by the user',
+    ],
+    info2:
+      'React, React Hooks, Styled Components, Netlify, Leaflet and IPify API',
+    url: 'https://address-tracker-app.netlify.app/',
+    repo: 'https://github.com/WeKiBan/ip-address-tracker',
+  },
   {
     id: nanoid(),
     img: room,
