@@ -7,6 +7,7 @@ import weather from './images/weather.png';
 import room from './images/Room.png';
 import portfolio from './images/portfolio.png';
 import ipTracker from './images/ipTrackerScreenshot.png';
+import restCountries from './images/restCountries.png';
 
 // ABOUT DATA
 export const aboutData = {
@@ -27,6 +28,19 @@ export const aboutData = {
 export const projectData = [
   {
     id: nanoid(),
+    img: restCountries,
+    title: ['Rest Countries API App', 'Rest Countries API App'],
+    info: [
+      "Applicazione creata utilizzando l'API Rest Countries. L'utente è in grado di cercare singoli paesi e quindi selezionare quel paese per vedere ulteriori dettagli",
+      'An application created using the rest countries API. The user is able to search for individual countries and then select that country to see further details',
+    ],
+    info2:
+      'NextJS, React, React Hooks, Styled Components, Netlify, Rest Countries API',
+    url: 'https://restcountrysearch.netlify.app/',
+    repo: 'https://github.com/WeKiBan/countries_app',
+  },
+  {
+    id: nanoid(),
     img: ipTracker,
     title: [
       'App per il monitoraggio degli indirizzi IP',
@@ -37,7 +51,7 @@ export const projectData = [
       'An application which tracks the location of an IP address provided by the user',
     ],
     info2:
-      'React, React Hooks, Styled Components, Netlify, Leaflet and IPify API',
+      'React, React Hooks, Styled Components, Netlify, Leaflet, IPify API',
     url: 'https://address-tracker-app.netlify.app/',
     repo: 'https://github.com/WeKiBan/ip-address-tracker',
   },
@@ -50,7 +64,7 @@ export const projectData = [
     ],
     info: [
       'Pagina per un sito Web di mobili costruita con React, Styled Components e React Hooks',
-      'Landing Page For Furniture Website built with React, and styled components and  React Hooks',
+      'Landing Page For Furniture Website built with React, Styled-Components and  React Hooks',
     ],
     info2: 'React, React Hooks and Styled Components',
     url: 'https://wekiban.github.io/Room/',
@@ -64,7 +78,7 @@ export const projectData = [
       'Una vetrina di alcuni dei miei lavori realizzati con React e Material-UI',
       'A showcase of some of my work built with React and Material-UI',
     ],
-    info2: 'React, React Hooks and Material-UI',
+    info2: 'React, React Hooks, Material-UI',
     url: 'https://wesbanyard.dev',
     repo: 'https://github.com/WeKiBan/new-portfolio',
   },

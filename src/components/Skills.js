@@ -12,6 +12,8 @@ import {
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import Grid from '@material-ui/core/Grid';
+import { Icon } from '@iconify/react';
+import nextIcon from '../images/nextIcon.svg';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -48,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
     textAlign: 'center',
+  },
+  svgIcon: {
+    width: '100px',
   },
 }));
 
@@ -143,6 +148,34 @@ function Skills({ english }) {
         >
           <FontAwesomeIcon icon={faReact} />
           <Typography>React</Typography>
+        </Grid>
+        <Grid
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-duration="500"
+          ease-in="true"
+          item
+          className={classes.logo}
+          xs={6}
+          sm={4}
+          md={2}
+        >
+          <img className={classes.svgIcon} src={nextIcon} alt="Next JS Icon" />
+          <Typography>Next.js</Typography>
+        </Grid>
+        <Grid
+          data-aos="fade-left"
+          data-aos-once="true"
+          data-aos-duration="500"
+          ease-in="true"
+          item
+          className={classes.logo}
+          xs={6}
+          sm={4}
+          md={2}
+        >
+          <Icon icon="mdi:material-ui" styles={{ color: 'orange' }} />
+          <Typography>Material UI</Typography>
         </Grid>
       </Grid>
     </Box>
