@@ -5,21 +5,14 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   font-display: block;
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  overflow: auto;
-  height: 100%;
-  overscroll-behavior: none;
 }
 
 html,
 body {
-  overflow: auto;
+  overflow-x: hidden;
   height: 100%;
   max-width: 100%;
+  overscroll-behavior: none;
 }
 
 *,
