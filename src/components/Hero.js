@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   bg: {
     background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${background})`,
+    url('https://ucarecdn.com/8a7bc605-24da-4021-8cd8-a0b4ae5294bb/-/preview/-/quality/smart/')`,
     backgroundRepeat: ' no-repeat',
     backgroundPosition: 'center center',
     backgroundSize: 'cover',
