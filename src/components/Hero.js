@@ -11,7 +11,6 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import WorkOutlineIcon from '@material-ui/icons/WorkOutline';
 import Switch from '@material-ui/core/Switch';
 import { Link } from 'react-scroll';
-import background from '../images/bg-computer.jpg';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
