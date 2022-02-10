@@ -1,13 +1,4 @@
 import { nanoid } from 'nanoid';
-import CvGenerator from './images/CV_Generator.png';
-import pbTimer from './images/pbtimer.png';
-import spoonly from './images/Spoonly.png';
-import taski from './images/taski.png';
-import weather from './images/weather.png';
-import room from './images/Room.png';
-import portfolio from './images/portfolio.png';
-import ipTracker from './images/ipTrackerScreenshot.png';
-import restCountries from './images/restCountries.png';
 
 // ABOUT DATA
 export const aboutData = {
@@ -28,7 +19,7 @@ export const aboutData = {
 export const projectData = [
   {
     id: nanoid(),
-    img: restCountries,
+    img: 'https://ucarecdn.com/f5e26ba6-5404-40f1-ae42-383b49eb5e53/-/preview/-/quality/smart/',
     title: ['Rest Countries API App', 'Rest Countries API App'],
     info: [
       "Applicazione creata utilizzando l'API Rest Countries. L'utente è in grado di cercare singoli paesi e quindi selezionare quel paese per vedere ulteriori dettagli",
@@ -41,7 +32,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: ipTracker,
+    img: 'https://ucarecdn.com/2b38028f-e1b9-4fab-a3db-0453409edcf0/-/preview/-/quality/smart/',
     title: [
       'App per il monitoraggio degli indirizzi IP',
       'IP Address Tracker App',
@@ -50,14 +41,13 @@ export const projectData = [
       "Applicazione che tiene traccia della posizione di un indirizzo IP fornito dall'utente",
       'An application which tracks the location of an IP address provided by the user',
     ],
-    info2:
-      'React, React Hooks, Styled Components, Netlify, Leaflet, IPify API',
+    info2: 'React, React Hooks, Styled Components, Netlify, Leaflet, IPify API',
     url: 'https://address-tracker-app.netlify.app/',
     repo: 'https://github.com/WeKiBan/ip-address-tracker',
   },
   {
     id: nanoid(),
-    img: room,
+    img: 'https://ucarecdn.com/70598e99-9dac-4031-ac0e-4b83adad828a/-/preview/-/quality/smart/',
     title: [
       'Pagina di destinazione per un sito web di mobili',
       'Landing Page For Furniture Website',
@@ -72,7 +62,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: portfolio,
+    img: 'https://ucarecdn.com/9eb0e3d8-59b1-4bfa-821d-729cbcfbcc1e/-/preview/-/quality/smart/',
     title: ['Questo Portfolio', 'This Portfolio'],
     info: [
       'Una vetrina di alcuni dei miei lavori realizzati con React e Material-UI',
@@ -84,7 +74,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: spoonly,
+    img: 'https://ucarecdn.com/52f244c6-53fa-4ec8-b513-3916f36fe992/-/preview/-/quality/smart/',
     title: [
       'Applicazione per la ricerca di ricette',
       'Recipe Search Application',
@@ -98,7 +88,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: CvGenerator,
+    img: 'https://ucarecdn.com/185e4f38-7029-4804-87e4-f50db9c037d7/-/preview/-/quality/smart/',
     title: ['App React generatore di CV', 'React CV Generator App'],
     info: [
       "Un'applicazione React che genera e stampa un CV dai dati inseriti dall'utente. Utilizza forme controllate e React Hooks",
@@ -110,7 +100,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: taski,
+    img: 'https://ucarecdn.com/2f01e60c-afb3-4227-9ce7-1c3c707351e4/-/preview/-/quality/smart/',
     title: ['Taski', 'Taski'],
     info: [
       "Un'app per la lista delle cose da fare creata utilizzando Vanilla JS e Bootstrap",
@@ -122,7 +112,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: pbTimer,
+    img: 'https://ucarecdn.com/80b9b7e8-3113-44e3-a3dd-ca1ea145c1b9/-/preview/-/quality/smart/',
     title: ['PB Timer', 'PB Timer'],
     info: [
       'Dato che amo risolvere il cubo di Rubik nel mio tempo libero, ho deciso di creare questa applicazione utilizzando Vanilla JS per tenere traccia dei miei tempi.',
@@ -134,7 +124,7 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: weather,
+    img: 'https://ucarecdn.com/23bbe2dc-56f4-46c6-8c97-5220d43e582b/-/preview/-/quality/smart/',
     title: ['Weather App', 'App Meteo'],
     info: [
       "Un'applicazione web che mostra in modo dinamico il meteo presente nelle località preferite dell'utente in tutto il mondo, da una serie di località che è conservata nell'archiviazione locale",
