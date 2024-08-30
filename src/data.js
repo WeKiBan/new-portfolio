@@ -5,11 +5,10 @@ export const aboutData = {
   img: '.profile.jpg',
   info: [
     [
-      "Sono Wes, uno sviluppatore web del West Midlands, Inghilterra, che attualmente vive a Milano. Sono appassionato di tecnologia e amo creare applicazioni innovative che semplifichino la vita delle persone. Trovo l'apprendimento di nuove tecnologie e la creazione di soluzioni a problemi difficili estremamente gratificante.",
-      'Al momento trascorro le mie serate a migliorare la mia conoscenza di React e NextJS. Il mio obiettivo a lungo termine è diventare uno sviluppatore full stack efficente, in grado di trasformare in modo efficace grandi idee in prodotti funzionanti.',
+      "Sono Wes, uno sviluppatore web del Regno Unito che attualmente vive a Milano, in Italia. Sono appassionato di tecnologia e amo creare applicazioni innovative che rendano la vita delle persone più facile. Trovo estremamente gratificante imparare nuove tecnologie e creare soluzioni a problemi complessi',Al momento, passo le mie serate ad approfondire le mie conoscenze di React e NextJS. Il mio obiettivo a lungo termine è diventare un efficace sviluppatore full stack, capace di trasformare idee brillanti in prodotti funzionanti in modo efficiente."
     ],
     [
-      "I'm Wes, a web developer from the West Midlands currently living in Milan, Italy. I'm passionate about tech and I love creating innovative applications that make people's lives easier. I find learning new technologies and creating solutions to difficult problems massively rewarding.",
+      "I'm Wes, a web developer from the UK currently living in Milan, Italy. I'm passionate about tech and I love creating innovative applications that make people's lives easier. I find learning new technologies and creating solutions to difficult problems massively rewarding.",
       'At the moment my evenings are spent improving my depth of knowledge with React and NextJS. My long term goal is to become an effective full stack developer, able to efficiently turn great ideas into working products.',
     ],
   ],
