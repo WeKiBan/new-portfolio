@@ -31,36 +31,6 @@ export const projectData = [
   },
   {
     id: nanoid(),
-    img: 'https://ucarecdn.com/2b38028f-e1b9-4fab-a3db-0453409edcf0/-/preview/-/quality/smart/',
-    title: [
-      'App per il monitoraggio degli indirizzi IP',
-      'IP Address Tracker App',
-    ],
-    info: [
-      "Applicazione che tiene traccia della posizione di un indirizzo IP fornito dall'utente",
-      'An application which tracks the location of an IP address provided by the user',
-    ],
-    info2: 'React, React Hooks, Styled Components, Netlify, Leaflet, IPify API',
-    url: 'https://address-tracker-app.netlify.app/',
-    repo: 'https://github.com/WeKiBan/ip-address-tracker',
-  },
-  {
-    id: nanoid(),
-    img: 'https://ucarecdn.com/70598e99-9dac-4031-ac0e-4b83adad828a/-/preview/-/quality/smart/',
-    title: [
-      'Pagina di destinazione per un sito web di mobili',
-      'Landing Page For Furniture Website',
-    ],
-    info: [
-      'Pagina per un sito Web di mobili costruita con React, Styled Components e React Hooks',
-      'Landing Page For Furniture Website built with React, Styled-Components and  React Hooks',
-    ],
-    info2: 'React, React Hooks and Styled Components',
-    url: 'https://wekiban.github.io/Room/',
-    repo: 'https://github.com/WeKiBan/Room',
-  },
-  {
-    id: nanoid(),
     img: 'https://ucarecdn.com/9eb0e3d8-59b1-4bfa-821d-729cbcfbcc1e/-/preview/-/quality/smart/',
     title: ['Questo Portfolio', 'This Portfolio'],
     info: [
@@ -120,18 +90,6 @@ export const projectData = [
     info2: 'Javascript, HTML, CSS',
     url: 'https://wekiban.github.io/Rubiks-cube-timer/',
     repo: 'https://github.com/WeKiBan/Rubiks-cube-timer',
-  },
-  {
-    id: nanoid(),
-    img: 'https://ucarecdn.com/23bbe2dc-56f4-46c6-8c97-5220d43e582b/-/preview/-/quality/smart/',
-    title: ['Weather App', 'App Meteo'],
-    info: [
-      "Un'applicazione web che mostra in modo dinamico il meteo presente nelle località preferite dell'utente in tutto il mondo, da una serie di località che è conservata nell'archiviazione locale",
-      "A web application which dynamically displays the present weather at the user's favorite locations around the globe, from an array of locations which is persisted in local storage.",
-    ],
-    info2: 'Javascript, Bootstrap, HTML, CSS OpenWeatherAPI',
-    url: 'https://wekiban.github.io/weather-app-2/',
-    repo: 'https://github.com/WeKiBan/weather-app-2',
   },
 ];
 
